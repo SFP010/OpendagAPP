@@ -50,7 +50,7 @@ public class  HomeScreen extends AppCompatActivity {
                 }
                 if ( id == R.id.myedit)
                 {
-                    Intent myIntent = new Intent(nav_view.getContext(), Studies.class);
+                    Intent myIntent = new Intent(nav_view.getContext(), InstitutePage.class);
                     startActivityForResult(myIntent,0);
                 }
                 if ( id == R.id.mysocial)
