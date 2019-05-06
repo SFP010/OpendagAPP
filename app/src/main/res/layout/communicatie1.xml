@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#CC0033"
-    tools:context=".InformaticaOpendag">
+    tools:context=".Communicatie1">
 
     <Button
         android:id="@+id/AddToCalender"
