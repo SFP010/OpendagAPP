@@ -9,7 +9,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".openingsHours"></activity>
+        <activity android:name=".Creativemgt3"></activity>
+        <activity android:name=".Creativemgt2" />
+        <activity android:name=".CMD3" />
+        <activity android:name=".CMD2" />
+        <activity android:name=".Communicatie3" />
+        <activity android:name=".Communicatie2" />
+        <activity android:name=".TechnInform3" />
+        <activity android:name=".TechnInform2" />
+        <activity android:name=".InformaticaOpendag3" />
+        <activity android:name=".InformaticaOpendag2" />
+        <activity android:name=".openingsHours" />
         <activity android:name=".Floorplans" />
         <activity android:name=".Route" />
         <activity android:name=".InstitutePage" />
@@ -17,7 +27,6 @@
         <activity android:name=".TechInformaticaPage" />
         <activity android:name=".InformaticaPage" />
         <activity android:name=".questionform" />
-        <activity android:name=".QuestionForm" />
         <activity android:name=".TechnInform1" />
         <activity android:name=".InformaticaOpendag" />
         <activity android:name=".Studies" />

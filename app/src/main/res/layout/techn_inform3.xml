@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#CC0033"
-    tools:context=".CreativeMGT1">
+    tools:context=".TechnInform3">
 
     <Button
         android:id="@+id/AddToCalender"
@@ -69,15 +69,16 @@
         app:layout_constraintTop_toBottomOf="@+id/route"
         app:layout_constraintVertical_bias="0.042" />
 
+
     <TextView
         android:id="@+id/infOpenDay"
-        android:layout_width="290dp"
-        android:layout_height="60dp"
+        android:layout_width="393dp"
+        android:layout_height="33dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:text="Creative Media and Game Technologies Open Day"
+        android:text="Technische Informatica Open Day"
         android:textColor="#ffffff"
         android:textSize="24sp"
         android:textStyle="bold"
@@ -183,6 +184,5 @@ Tour                20:00 - 21:00"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/act2TextView"
         app:layout_constraintVertical_bias="0.0" />
-
 
 </android.support.constraint.ConstraintLayout>

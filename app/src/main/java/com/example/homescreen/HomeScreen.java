@@ -64,10 +64,10 @@ public class  HomeScreen extends AppCompatActivity {
         });
 
         String[] values = new String[]{
-                "Informatica  03-12-18", "Technische informatica  03-12-18", "Communicatie", "Communication and Multimedia Design",
-                "Creative Media and Game Technologies", "Informatica", "Technische informatica", "Communicatie", "Communication and Multimedia Design",
-                "Creative Media and Game Technologies", "Informatica", "Technische informatica", "Communicatie", "Communication and Multimedia Design",
-                "Creative Media and Game Technologies"
+                "Informatica  03-12-18", "Technische informatica  03-12-18", "Communicatie 03-12-18", "Communication and Multimedia Design 03-12-18",
+                "Creative Media and Game Technologies 03-12-18", "Informatica 02-23-19", "Technische informatica 02-23-19", "Communicatie 02-23-19", "Communication and Multimedia Design 02-23-19",
+                "Creative Media and Game Technologies 02-23-19", "Informatica 04-15-19", "Technische informatica 04-15-19", "Communicatie 04-15-19", "Communication and Multimedia Design 04-15-19",
+                "Creative Media and Game Technologies 04-15-19"
         };
 
         ArrayAdapter<String> itemsAdapter =
@@ -99,43 +99,43 @@ public class  HomeScreen extends AppCompatActivity {
                     startActivityForResult(myIntent, 0);
                 }
                 if (position==5) {
-                    Intent myIntent = new Intent(view.getContext(), TechnInform1.class);
+                    Intent myIntent = new Intent(view.getContext(), InformaticaOpendag2.class);
                     startActivityForResult(myIntent, 0);
                 }
                 if (position==6) {
-                    Intent myIntent = new Intent(view.getContext(), TechnInform1.class);
+                    Intent myIntent = new Intent(view.getContext(), TechnInform2.class);
                     startActivityForResult(myIntent, 0);
                 }
                 if (position==7) {
-                    Intent myIntent = new Intent(view.getContext(), TechnInform1.class);
+                    Intent myIntent = new Intent(view.getContext(), Communicatie2.class);
                     startActivityForResult(myIntent, 0);
                 }
                 if (position==8) {
-                    Intent myIntent = new Intent(view.getContext(), TechnInform1.class);
+                    Intent myIntent = new Intent(view.getContext(), CMD2.class);
                     startActivityForResult(myIntent, 0);
                 }
                 if (position==9) {
-                    Intent myIntent = new Intent(view.getContext(), TechnInform1.class);
+                    Intent myIntent = new Intent(view.getContext(), Creativemgt2.class);
                     startActivityForResult(myIntent, 0);
                 }
                 if (position==10) {
-                    Intent myIntent = new Intent(view.getContext(), TechnInform1.class);
+                    Intent myIntent = new Intent(view.getContext(), InformaticaOpendag3.class);
                     startActivityForResult(myIntent, 0);
                 }
                 if (position==11) {
-                    Intent myIntent = new Intent(view.getContext(), TechnInform1.class);
+                    Intent myIntent = new Intent(view.getContext(), TechnInform3.class);
                     startActivityForResult(myIntent, 0);
                 }
                 if (position==12) {
-                    Intent myIntent = new Intent(view.getContext(), TechnInform1.class);
+                    Intent myIntent = new Intent(view.getContext(), Communicatie3.class);
                     startActivityForResult(myIntent, 0);
                 }
                 if (position==13) {
-                    Intent myIntent = new Intent(view.getContext(), TechnInform1.class);
+                    Intent myIntent = new Intent(view.getContext(), CMD3.class);
                     startActivityForResult(myIntent, 0);
                 }
                 if (position==14) {
-                    Intent myIntent = new Intent(view.getContext(), TechnInform1.class);
+                    Intent myIntent = new Intent(view.getContext(), Creativemgt3.class);
                     startActivityForResult(myIntent, 0);
                 }
 

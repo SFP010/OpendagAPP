@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#CC0033"
-    tools:context=".CreativeMGT1">
+    tools:context=".Communicatie2">
 
     <Button
         android:id="@+id/AddToCalender"
@@ -72,12 +72,12 @@
     <TextView
         android:id="@+id/infOpenDay"
         android:layout_width="290dp"
-        android:layout_height="60dp"
+        android:layout_height="33dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:text="Creative Media and Game Technologies Open Day"
+        android:text="Communication Open Day"
         android:textColor="#ffffff"
         android:textSize="24sp"
         android:textStyle="bold"
