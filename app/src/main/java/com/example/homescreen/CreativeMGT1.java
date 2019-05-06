@@ -16,6 +16,7 @@ public class CreativeMGT1 extends AppCompatActivity {
     Button copen;
     Button share;
     Button question;
+    Button route;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -70,6 +71,13 @@ public class CreativeMGT1 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(CreativeMGT1.this, questionform.class ));
+            }
+        });
+        route = findViewById(R.id.route);
+        route.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(CreativeMGT1.this, Route.class));
             }
         });
     }
