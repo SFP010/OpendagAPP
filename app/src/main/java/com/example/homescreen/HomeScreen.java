@@ -65,9 +65,9 @@ public class  HomeScreen extends AppCompatActivity {
 
         String[] values = new String[]{
                 "Informatica  03-12-18", "Technische informatica  03-12-18", "Communicatie 03-12-18", "Communication and Multimedia Design 03-12-18",
-                "Creative Media and Game Technologies 03-12-18", "Informatica 02-23-19", "Technische informatica 02-23-19", "Communicatie 02-23-19", "Communication and Multimedia Design 02-23-19",
-                "Creative Media and Game Technologies 02-23-19", "Informatica 04-15-19", "Technische informatica 04-15-19", "Communicatie 04-15-19", "Communication and Multimedia Design 04-15-19",
-                "Creative Media and Game Technologies 04-15-19"
+                "Creative Media and Game Technologies 03-12-18", "Informatica 23-02-19", "Technische informatica 23-02-19", "Communicatie 23-02-19", "Communication and Multimedia Design 23-02-19",
+                "Creative Media and Game Technologies 23-02-19", "Informatica 04-04-19", "Technische informatica 04-04-19", "Communicatie 04-04-19", "Communication and Multimedia Design 04-04-19",
+                "Creative Media and Game Technologies 04-04-19"
         };
 
         ArrayAdapter<String> itemsAdapter =

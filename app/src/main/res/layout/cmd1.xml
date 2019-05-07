@@ -90,7 +90,7 @@
 
     <EditText
         android:id="@+id/infDate"
-        android:layout_width="133dp"
+        android:layout_width="180dp"
         android:layout_height="38dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
@@ -98,7 +98,7 @@
         android:layout_marginBottom="8dp"
         android:ems="10"
         android:inputType="date"
-        android:text="May 15th, 2019"
+        android:text="December 3th, 2018"
         android:textColor="#ffffff"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -133,8 +133,8 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:background="#7f0000"
-        android:text="Exposition of     May 15th          4th floor
-Projects          17:00 - 18:30       WD4.202"
+        android:text="Exposition of    17:00 - 18:30        4th floor
+Projects                                             WD4.202"
         android:textColor="#ffffff"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -153,8 +153,8 @@ Projects          17:00 - 18:30       WD4.202"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:background="#7f0000"
-        android:text="Director's          May 15th         Begane Grond
-Speech           19:00 - 19:30      Cafeteria"
+        android:text="Director's          19:00 - 19:30       Base floor
+Speech                                           Cafeteria"
         android:textColor="#ffffff"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -173,8 +173,8 @@ Speech           19:00 - 19:30      Cafeteria"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:background="#7f0000"
-        android:text="School              May 15th          All Floors
-Tour                20:00 - 21:00"
+        android:text="School                20:00 - 21:00        All Floors
+Tour                "
         android:textColor="#ffffff"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
