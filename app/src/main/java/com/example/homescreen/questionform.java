@@ -61,7 +61,7 @@ public class questionform extends AppCompatActivity {
                 sendEmail.putExtra(android.content.Intent.EXTRA_EMAIL, new String[]{"timopolderman@gmail.com"});
                 sendEmail.putExtra(android.content.Intent.EXTRA_SUBJECT, subject);
                 sendEmail.putExtra(android.content.Intent.EXTRA_TEXT,
-                        "Name: "+name+'\n'+"Email ID: "+email+'\n'+"MainActivity: "+'\n'+question);
+                        "Name: "+name+'\n'+"Email ID: "+email+'\n'+" Question: "+'\n'+question);
 
 
                 startActivity(Intent.createChooser(sendEmail, "Send mail..."));
