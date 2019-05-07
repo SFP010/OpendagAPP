@@ -98,7 +98,7 @@
         android:layout_marginBottom="8dp"
         android:ems="10"
         android:inputType="date"
-        android:text="February 23rd 2019"
+        android:text="April 4th, 2019"
         android:textColor="#ffffff"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
