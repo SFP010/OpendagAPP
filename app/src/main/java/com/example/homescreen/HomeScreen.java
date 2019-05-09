@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
+import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
@@ -41,22 +42,26 @@ public class  HomeScreen extends AppCompatActivity {
                 if ( id == R.id.myprofile)
                 {
                     Intent myIntent = new Intent(nav_view.getContext(), HomeScreen.class);
-                    startActivityForResult(myIntent,0);;
+                    startActivityForResult(myIntent,0);
+                    dl.closeDrawer(GravityCompat.START);
                 }
                 if ( id == R.id.mysettings)
                 {
                     Intent myIntent = new Intent(nav_view.getContext(), Studies.class);
                     startActivityForResult(myIntent,0);
+                    dl.closeDrawer(GravityCompat.START);
                 }
                 if ( id == R.id.myedit)
                 {
                     Intent myIntent = new Intent(nav_view.getContext(), InstitutePage.class);
                     startActivityForResult(myIntent,0);
+                    dl.closeDrawer(GravityCompat.START);
                 }
                 if ( id == R.id.mysocial)
                 {
                     Intent myIntent = new Intent(nav_view.getContext(), questionform.class);
                     startActivityForResult(myIntent,0);
+                    dl.closeDrawer(GravityCompat.START);
                 }
 
                 return true;
