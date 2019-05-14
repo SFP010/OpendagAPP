@@ -107,7 +107,7 @@
         android:layout_marginBottom="8dp"
         android:ems="10"
         android:inputType="date"
-        android:text="April 4th, 2019"
+        android:text="@string/Tech_inf_first_date"
         android:textColor="#ffffff"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
