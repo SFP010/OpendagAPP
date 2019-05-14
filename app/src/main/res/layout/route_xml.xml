@@ -7,21 +7,25 @@
     android:background="#CC0033"
     tools:context=".Route">
 
-
-    <ImageView
-        android:id="@+id/maps"
-        android:layout_width="407dp"
-        android:layout_height="228dp"
-        android:layout_marginTop="8dp"
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="412dp"
+        android:layout_height="220dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.533"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/maps2" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/editText"
         android:layout_width="402dp"
         android:layout_height="49dp"
+        android:layout_marginTop="8dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="By car"
@@ -29,7 +33,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.444"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/maps" />
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <TextView
         android:id="@+id/textView"
@@ -38,6 +42,7 @@
         android:text="Wijnhaven 107 lays in the center of Rotterdam. If approaching from the south, drive over the Erasmusbrug. When approaching from the north, drive over the Coolsingel in the direction of the Kubuswoningen, then take a right turn at the Posthornstraat, and take the second right turn to Wijnhaven 107."
         android:textColor="#ffffff"
         android:textSize="16sp"
+        android:gravity="center_horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText" />
@@ -62,10 +67,25 @@
         android:text="From Rotterdam Central Station, take metroline D too 'De Akkers' or take metroline E too 'Slinge'. Exit the metro at station Beurs, walk toward Maritime museum. You should see the building when you're standing on 'Plein 1940'"
         android:textColor="#ffffff"
         android:textSize="16sp"
+        android:gravity="center_horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText2" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="412dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:text="Wijnhaven 107                                                                                 3011WN Rotterdam"
+        android:background="#ffffff"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.888"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/map" />
 
 
 </android.support.constraint.ConstraintLayout>
