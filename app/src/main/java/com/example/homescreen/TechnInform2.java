@@ -16,6 +16,7 @@ public class TechnInform2 extends AppCompatActivity {
     Button copen;
     Button share;
     Button question;
+    Button route;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -70,6 +71,13 @@ public class TechnInform2 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(TechnInform2.this, questionform.class ));
+            }
+        });
+        route = findViewById(R.id.route);
+        route.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(TechnInform2.this, Route.class));
             }
         });
     }

@@ -1,9 +1,15 @@
 package com.example.homescreen;
 
 import android.content.Intent;
+import android.support.annotation.NonNull;
+import android.support.design.widget.NavigationView;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -12,11 +18,56 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class questionform extends AppCompatActivity {
+    private DrawerLayout dl;
+    private ActionBarDrawerToggle abdt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.questionform_activity);
+        dl = (DrawerLayout)findViewById(R.id.dl);
+        abdt = new ActionBarDrawerToggle(this, dl,R.string.Open, R.string.Close);
+        abdt.setDrawerIndicatorEnabled(true);
+
+        dl.addDrawerListener(abdt);
+        abdt.syncState();
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        final NavigationView nav_view = (NavigationView)findViewById(R.id.nav_view);
+
+        nav_view.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                int id = menuItem.getItemId();
+                if ( id == R.id.myprofile)
+                {
+                    Intent myIntent = new Intent(nav_view.getContext(), HomeScreen.class);
+                    startActivityForResult(myIntent,0);
+                    dl.closeDrawer(GravityCompat.START);
+                }
+                if ( id == R.id.mysettings)
+                {
+                    Intent myIntent = new Intent(nav_view.getContext(), Studies.class);
+                    startActivityForResult(myIntent,0);
+                    dl.closeDrawer(GravityCompat.START);
+                }
+                if ( id == R.id.myedit)
+                {
+                    Intent myIntent = new Intent(nav_view.getContext(), InstitutePage.class);
+                    startActivityForResult(myIntent,0);
+                    dl.closeDrawer(GravityCompat.START);
+                }
+                if ( id == R.id.mysocial)
+                {
+                    Intent myIntent = new Intent(nav_view.getContext(), questionform.class);
+                    startActivityForResult(myIntent,0);
+                    dl.closeDrawer(GravityCompat.START);
+                }
+
+                return true;
+            }
+        });
 
         final EditText nameEdit = (EditText) findViewById(R.id.nameEdit);
         final EditText emailEdit = (EditText) findViewById(R.id.emailEdit);
@@ -61,7 +112,7 @@ public class questionform extends AppCompatActivity {
                 sendEmail.putExtra(android.content.Intent.EXTRA_EMAIL, new String[]{"timopolderman@gmail.com"});
                 sendEmail.putExtra(android.content.Intent.EXTRA_SUBJECT, subject);
                 sendEmail.putExtra(android.content.Intent.EXTRA_TEXT,
-                        "Name: "+name+'\n'+"Email ID: "+email+'\n'+"MainActivity: "+'\n'+question);
+                        "Name: "+name+'\n'+"Email ID: "+email+'\n'+" Question: "+'\n'+question);
 
 
                 startActivity(Intent.createChooser(sendEmail, "Send mail..."));
@@ -81,4 +132,13 @@ public class questionform extends AppCompatActivity {
         Matcher matcher = pattern.matcher(email);
         return matcher.matches();
     }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        return abdt.onOptionsItemSelected(item) || super.onOptionsItemSelected(item);
+
+
+    }
+
 }
+
+

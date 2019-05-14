@@ -6,6 +6,21 @@
     android:layout_height="match_parent"
     tools:context=".InstitutePage"
     android:background="#CC0033">
+    <android.support.v4.widget.DrawerLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:context=".Homescreen"
+        android:orientation="vertical"
+        android:id="@+id/dl">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
 
 
     <TextView
@@ -18,7 +33,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
-        android:text="@string/Institute_address"
+        android:text="Hogeschool Rotterdam Wijnhaven 107 3011WN, Rotterdam 0906-0708"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -49,7 +64,7 @@
         android:layout_height="137dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
-        android:text="@string/InstitutePage_info"
+        android:text="Inside CMI we have the studies Communication(CO),Communication and Multimedia Design (CMD), Creative Media and Game Technologies (CMGT, Technical Informatica (TI) and Informatica (INF). The 'Stadslab' is also established in the building."
         android:textColor="#ffffff"
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/textView2"
@@ -61,32 +76,36 @@
 
     <Button
         android:id="@+id/opening_hours"
-        android:layout_width="140dp"
-        android:layout_height="44dp"
+        android:layout_width="147dp"
+        android:layout_height="50dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:text="@string/opening_hours"
+        android:background="@drawable/custom_button"
+        android:text="opening hours"
+        android:textColor="#CC0033"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.121"
+        app:layout_constraintHorizontal_bias="0.12"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.589" />
+        app:layout_constraintVertical_bias="0.579" />
 
     <Button
         android:id="@+id/floor_plans"
-        android:layout_width="140dp"
-        android:layout_height="44dp"
+        android:layout_width="147dp"
+        android:layout_height="50dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
-        android:text="@string/Floorplans"
+        android:text="floorplans"
+        android:textColor="#CC0033"
+        android:background="@drawable/custom_button"
         app:layout_constraintBottom_toTopOf="@+id/website"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/opening_hours"
@@ -95,15 +114,17 @@
 
     <Button
         android:id="@+id/route"
-        android:layout_width="140dp"
-        android:layout_height="44dp"
+        android:layout_width="147dp"
+        android:layout_height="50dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
-        android:text="@string/Route"
+        android:text="route"
+        android:textColor="#CC0033"
+        android:background="@drawable/custom_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.121"
@@ -113,19 +134,36 @@
 
     <Button
         android:id="@+id/website"
-        android:layout_width="140dp"
-        android:layout_height="44dp"
+        android:layout_width="147dp"
+        android:layout_height="50dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
-        android:text="@string/Website"
+        android:text="website"
+        android:textColor="#CC0033"
+        android:background="@drawable/custom_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/route"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.731" />
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.design.widget.NavigationView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/nav_view"
+            android:layout_gravity= "start"
+            app:headerLayout="@layout/navigation_header"
+            app:menu="@menu/navigation_menu">
+
+
+
+        </android.support.design.widget.NavigationView>
+
+    </android.support.v4.widget.DrawerLayout>
 
 </android.support.constraint.ConstraintLayout>

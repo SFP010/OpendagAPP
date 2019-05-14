@@ -16,6 +16,7 @@ public class CMD3 extends AppCompatActivity {
     Button copen;
     Button share;
     Button question;
+    Button route;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -70,6 +71,13 @@ public class CMD3 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(CMD3.this, questionform.class ));
+            }
+        });
+        route = findViewById(R.id.route);
+        route.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(CMD3.this, Route.class));
             }
         });
     }
