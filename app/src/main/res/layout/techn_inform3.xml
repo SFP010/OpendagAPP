@@ -5,192 +5,185 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#CC0033"
-    tools:context=".TechnInform3">
-
-    <Button
-        android:id="@+id/AddToCalender"
-        android:layout_width="147dp"
-        android:layout_height="50dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="104dp"
-        android:background="@drawable/custom_button"
-        android:text="Add to calendar"
-        android:textColor="#CC0033"
+    tools:context=".InformaticaOpendag">
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/dl"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.14"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/ShareIt"
-        android:layout_width="147dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="Share it"
-        android:textColor="#CC0033"
-        android:background="@drawable/custom_button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.112"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/AddToCalender"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <Button
-        android:id="@+id/route"
-        android:layout_width="147dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginBottom="104dp"
-        android:text="Route"
-        android:textColor="#CC0033"
-        android:background="@drawable/custom_button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.41"
-        app:layout_constraintStart_toEndOf="@+id/AddToCalender" />
-
-    <Button
-        android:id="@+id/Questions"
-        android:layout_width="147dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:background="@drawable/custom_button"
-        android:text="Questions"
-        android:textColor="#CC0033"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.858"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/route"
-        app:layout_constraintVertical_bias="0.042" />
-
-
-    <TextView
-        android:id="@+id/infOpenDay"
-        android:layout_width="393dp"
-        android:layout_height="33dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="Technische Informatica Open Day"
-        android:textColor="#ffffff"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.011" />
+        tools:context=".Homescreen">
 
-    <EditText
-        android:id="@+id/infDate"
-        android:layout_width="133dp"
-        android:layout_height="38dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:ems="10"
-        android:inputType="date"
-        android:text="@string/Tech_inf_first_date"
-        android:textColor="#ffffff"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/infOpenDay"
-        app:layout_constraintVertical_bias="0.0" />
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-    <EditText
-        android:id="@+id/whatPlainText"
-        android:layout_width="393dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginEnd="8dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="WHAT?             WHEN?             WHERE?"
-        android:textSize="22sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/act3TextView"
+                android:layout_width="393dp"
+                android:layout_height="75dp"
+                android:layout_marginStart="9dp"
+                android:layout_marginLeft="9dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="9dp"
+                android:layout_marginRight="9dp"
+                android:background="#7f0000"
+                android:text="School                20:00 - 21:00        All Floors
+        Tour                "
+                android:textColor="#ffffff"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/whatPlainText" />
 
-    <TextView
-        android:id="@+id/act1TextView"
-        android:layout_width="393dp"
-        android:layout_height="75dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:background="#7f0000"
-        android:text="Exposition of     May 15th          4th floor
-Projects          17:00 - 18:30       WD4.202"
-        android:textColor="#ffffff"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/whatPlainText"
-        app:layout_constraintVertical_bias="0.0" />
+            <TextView
+                android:id="@+id/act2TextView"
+                android:layout_width="393dp"
+                android:layout_height="75dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="#7f0000"
+                android:text="Director's          19:00 - 19:30       Base floor
+        Speech                                           Cafeteria"
+                android:textColor="#ffffff"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/act3TextView" />
 
-    <TextView
-        android:id="@+id/act2TextView"
-        android:layout_width="393dp"
-        android:layout_height="75dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:background="#7f0000"
-        android:text="Director's          May 15th         Begane Grond
-Speech           19:00 - 19:30      Cafeteria"
-        android:textColor="#ffffff"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/act1TextView"
-        app:layout_constraintVertical_bias="0.024" />
+            <TextView
+                android:id="@+id/act1TextView"
+                android:layout_width="393dp"
+                android:layout_height="75dp"
+                android:layout_marginStart="9dp"
+                android:layout_marginLeft="9dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="9dp"
+                android:layout_marginRight="9dp"
+                android:background="#7f0000"
+                android:text="Exposition of    17:00 - 18:30        4th floor
+        Projects                                             WD4.202"
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/act2TextView" />
 
-    <TextView
-        android:id="@+id/act3TextView"
-        android:layout_width="393dp"
-        android:layout_height="75dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:background="#7f0000"
-        android:text="School              May 15th          All Floors
-Tour                20:00 - 21:00"
-        android:textColor="#ffffff"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/act2TextView"
-        app:layout_constraintVertical_bias="0.0" />
+            <TextView
+                android:id="@+id/whatPlainText"
+                android:layout_width="393dp"
+                android:layout_height="52dp"
+                android:layout_marginStart="9dp"
+                android:layout_marginLeft="9dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="9dp"
+                android:layout_marginRight="9dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="WHAT?             WHEN?             WHERE?"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/infOpenDay" />
+
+            <TextView
+                android:id="@+id/infOpenDay"
+                android:layout_width="378dp"
+                android:layout_height="72dp"
+                android:layout_marginStart="87dp"
+                android:layout_marginLeft="87dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="73dp"
+                android:layout_marginRight="73dp"
+                android:gravity="center_horizontal"
+                android:text="Technische Informatica open day April 4th, 2019"
+                android:textColor="#ffffff"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/Questions"
+                android:layout_width="147dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="28dp"
+                android:layout_marginRight="28dp"
+                android:background="@drawable/custom_button"
+                android:text="@string/QuestionText"
+                android:textColor="#CC0033"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ShareIt" />
+
+            <Button
+                android:id="@+id/route"
+                android:layout_width="147dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="39dp"
+                android:layout_marginEnd="73dp"
+                android:layout_marginRight="73dp"
+                android:background="@drawable/custom_button"
+                android:text="@string/RouteText"
+                android:textColor="#CC0033"
+                app:layout_constraintEnd_toStartOf="@+id/ShareIt"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/act1TextView" />
+
+            <Button
+                android:id="@+id/ShareIt"
+                android:layout_width="147dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="39dp"
+                android:layout_marginEnd="28dp"
+                android:layout_marginRight="28dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/custom_button"
+                android:text="@string/ShareText"
+                android:textColor="#CC0033"
+                app:layout_constraintBottom_toTopOf="@+id/Questions"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/act1TextView" />
+
+            <Button
+                android:id="@+id/AddToCalender"
+                android:layout_width="147dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="73dp"
+                android:layout_marginRight="73dp"
+                android:background="@drawable/custom_button"
+                android:text="@string/CalendarText"
+                android:textColor="#CC0033"
+                app:layout_constraintEnd_toStartOf="@+id/Questions"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/route" />
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.design.widget.NavigationView
+            android:id="@+id/nav_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            app:headerLayout="@layout/navigation_header"
+            app:menu="@menu/navigation_menu">
+
+
+        </android.support.design.widget.NavigationView>
+
+    </android.support.v4.widget.DrawerLayout>
+
 
 </android.support.constraint.ConstraintLayout>

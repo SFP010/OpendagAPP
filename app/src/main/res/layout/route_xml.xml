@@ -6,86 +6,119 @@
     android:layout_height="match_parent"
     android:background="#CC0033"
     tools:context=".Route">
+    <android.support.v4.widget.DrawerLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:context=".Homescreen"
+        android:orientation="vertical"
+        android:id="@+id/dl">
 
-    <fragment
-        android:id="@+id/map"
-        android:name="com.google.android.gms.maps.SupportMapFragment"
-        android:layout_width="412dp"
-        android:layout_height="220dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.533"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <android.support.design.widget.NavigationView
+            android:id="@+id/nav_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            app:headerLayout="@layout/navigation_header"
+            app:menu="@menu/navigation_menu">
 
-    <EditText
-        android:id="@+id/editText"
-        android:layout_width="402dp"
-        android:layout_height="49dp"
-        android:layout_marginTop="8dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="By car"
-        android:textColor="#ffffff"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.444"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="399dp"
-        android:layout_height="135dp"
-        android:text="Wijnhaven 107 lays in the center of Rotterdam. If approaching from the south, drive over the Erasmusbrug. When approaching from the north, drive over the Coolsingel in the direction of the Kubuswoningen, then take a right turn at the Posthornstraat, and take the second right turn to Wijnhaven 107."
-        android:textColor="#ffffff"
-        android:textSize="16sp"
-        android:gravity="center_horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
+        </android.support.design.widget.NavigationView>
 
-    <EditText
-        android:id="@+id/editText2"
-        android:layout_width="412dp"
-        android:layout_height="54dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Public transport"
-        android:textColor="#ffffff"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="399dp"
-        android:layout_height="99dp"
-        android:text="From Rotterdam Central Station, take metroline D too 'De Akkers' or take metroline E too 'Slinge'. Exit the metro at station Beurs, walk toward Maritime museum. You should see the building when you're standing on 'Plein 1940'"
-        android:textColor="#ffffff"
-        android:textSize="16sp"
-        android:gravity="center_horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.333"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText2" />
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="399dp"
+                android:layout_height="99dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:gravity="center_horizontal"
+                android:text="From Rotterdam Central Station, take metroline D too 'De Akkers' or take metroline E too 'Slinge'. Exit the metro at station Beurs, walk toward Maritime museum. You should see the building when you're standing on 'Plein 1940'"
+                android:textColor="#ffffff"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editText2" />
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="412dp"
-        android:layout_height="46dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:text="Wijnhaven 107                                                                                 3011WN Rotterdam"
-        android:background="#ffffff"
-        android:gravity="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.888"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/map" />
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="412dp"
+                android:layout_height="46dp"
+                android:background="#ffffff"
+                android:gravity="center"
+                android:text="Wijnhaven 107                                                                                 3011WN Rotterdam"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/map" />
+
+            <EditText
+                android:id="@+id/editText2"
+                android:layout_width="412dp"
+                android:layout_height="54dp"
+                android:layout_marginStart="3dp"
+                android:layout_marginLeft="3dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Public transport"
+                android:textColor="#ffffff"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.75"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="399dp"
+                android:layout_height="135dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginRight="15dp"
+                android:gravity="center_horizontal"
+                android:text="Wijnhaven 107 lays in the center of Rotterdam. If approaching from the south, drive over the Erasmusbrug. When approaching from the north, drive over the Coolsingel in the direction of the Kubuswoningen, then take a right turn at the Posthornstraat, and take the second right turn to Wijnhaven 107."
+                android:textColor="#ffffff"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editText" />
+
+            <EditText
+                android:id="@+id/editText"
+                android:layout_width="402dp"
+                android:layout_height="49dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="By car"
+                android:textColor="#ffffff"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+            <fragment
+                android:id="@+id/map"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="412dp"
+                android:layout_height="220dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v4.widget.DrawerLayout>
 
 
 </android.support.constraint.ConstraintLayout>
