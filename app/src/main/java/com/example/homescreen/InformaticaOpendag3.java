@@ -27,8 +27,8 @@ public class InformaticaOpendag3 extends AppCompatActivity {
             public void onClick(View view) {
                 Intent myIntent = new Intent(Intent.ACTION_SEND);
                 myIntent.setType("text/plain");
-                String shareBody = "Your body here";
-                String shareSub = "Your Subject here";
+                String shareBody = "Hi do you want to come to the openday with me?";
+                String shareSub = "Openday";
                 myIntent.putExtra(Intent.EXTRA_SUBJECT,shareSub);
                 myIntent.putExtra(Intent.EXTRA_TEXT,shareBody);
                 startActivity(Intent.createChooser(myIntent, "Share openday"));
