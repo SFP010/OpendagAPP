@@ -3,6 +3,12 @@
     <string name="title_activity_main3">Main3Activity</string>
     <string name="Open">NavBar</string>
     <string name="Close">NavBar</string>
+    <string name="ShareIt" />
+    <string name="QuestionText">Questions</string>
+    <string name="ShareText">Share</string>
+    <string name="RouteText">Route</string>
+    <string name="CalendarText">Add to calendar</string>
+    <string name="WhenwherewhatText">WHAT?             WHEN?             WHERE?</string>
     <string name="Communication_info">Do you have a keen eye and ear for the stories of people and brands? Are you creative with text and image and fascinated by the world of media? Then the Communication course is for you!</string>
     <string name="Comminucation_info2">Our Communication course trains you in four years to what we - proudly - call a smart connector. A professional who ensures smart connections. With the use of social tools, storytelling, big data and co-creation, for example. You develop creative concepts such as media campaigns, events and story platforms. Based on good research, theory and strategy and of course your own surprising ideas.</string>
     <string name="opendayCommunication">Upcoming openday:                                                  04/04/2019</string>
