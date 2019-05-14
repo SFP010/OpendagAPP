@@ -3,4 +3,10 @@
     <string name="title_activity_main3">Main3Activity</string>
     <string name="Open">NavBar</string>
     <string name="Close">NavBar</string>
+    <string name="ShareIt" />
+    <string name="QuestionText">Questions</string>
+    <string name="ShareText">Share</string>
+    <string name="RouteText">Route</string>
+    <string name="CalendarText">Add to calendar</string>
+    <string name="WhenwherewhatText">WHAT?             WHEN?             WHERE?</string>
 </resources>
