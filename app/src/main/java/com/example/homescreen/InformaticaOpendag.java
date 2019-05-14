@@ -50,19 +50,19 @@ Button route;
                     startActivityForResult(myIntent,0);
                     dl.closeDrawer(GravityCompat.START);
                 }
-                if ( id == R.id.mysettings)
+                else if ( id == R.id.mysettings)
                 {
                     Intent myIntent = new Intent(nav_view.getContext(), Studies.class);
                     startActivityForResult(myIntent,0);
                     dl.closeDrawer(GravityCompat.START);
                 }
-                if ( id == R.id.myedit)
+                else if ( id == R.id.myedit)
                 {
                     Intent myIntent = new Intent(nav_view.getContext(), InstitutePage.class);
                     startActivityForResult(myIntent,0);
                     dl.closeDrawer(GravityCompat.START);
                 }
-                if ( id == R.id.mysocial)
+                else if ( id == R.id.mysocial)
                 {
                     Intent myIntent = new Intent(nav_view.getContext(), questionform.class);
                     startActivityForResult(myIntent,0);

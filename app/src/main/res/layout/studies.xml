@@ -27,31 +27,40 @@
                 android:id="@+id/textView5"
                 android:layout_width="383dp"
                 android:layout_height="70dp"
+                android:layout_marginEnd="28dp"
+                android:layout_marginRight="28dp"
                 android:text="As a technical computer scientist you work on modern IT systems in which hardware and software are integrated. Thanks to programming and hardware knowledge, you can operate at the intersection thereof."
                 android:textColor="#FFFFFF"
-                app:layout_constraintTop_toBottomOf="@+id/informaticaClick"
-                tools:layout_editor_absoluteX="0dp" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/informaticaClick" />
 
             <TextView
                 android:id="@+id/textView4"
                 android:layout_width="322dp"
                 android:layout_height="97dp"
                 android:layout_marginTop="8dp"
+                android:layout_marginEnd="89dp"
+                android:layout_marginRight="89dp"
                 android:text="We train you to be a software engineer. You get started with the development of software for various applications. You are able to analyze design and implement complex IT systems"
                 android:textColor="#FFFFFF"
-                app:layout_constraintTop_toBottomOf="@+id/techinformaticaClick"
-                tools:layout_editor_absoluteX="0dp" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/techinformaticaClick" />
 
             <Button
                 android:id="@+id/communicationClick"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginEnd="219dp"
+                android:layout_marginRight="219dp"
                 android:text="Communication"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp"
-                app:layout_constraintTop_toBottomOf="@+id/textView5"
-                tools:layout_editor_absoluteX="-5dp" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
             <Button
                 android:id="@+id/informaticaClick"
@@ -59,11 +68,14 @@
                 android:layout_width="168dp"
                 android:layout_height="50dp"
                 android:layout_marginTop="12dp"
+                android:layout_marginEnd="243dp"
+                android:layout_marginRight="243dp"
                 android:text="Informatica"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp"
-                app:layout_constraintTop_toBottomOf="@+id/imageView"
-                tools:layout_editor_absoluteX="0dp" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
             <ImageView
                 android:id="@+id/imageView"
@@ -80,22 +92,31 @@
                 android:id="@+id/textView6"
                 android:layout_width="383dp"
                 android:layout_height="76dp"
+                android:layout_marginEnd="28dp"
+                android:layout_marginRight="28dp"
                 android:text="Do you have a keen eye and ear for the stories op people and brands? Are you creative with text and image and facinated by the world of media? Then the communication course is for you!"
                 android:textColor="#FFFFFF"
-                app:layout_constraintTop_toBottomOf="@+id/communicationClick"
-                tools:layout_editor_absoluteX="0dp" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/communicationClick" />
 
             <Button
                 android:id="@+id/techinformaticaClick"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginEnd="134dp"
+                android:layout_marginRight="134dp"
                 android:background="#CC0033"
                 android:text="Technische informatica"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp"
-                app:layout_constraintTop_toBottomOf="@+id/textView6"
-                tools:layout_editor_absoluteX="0dp" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
         </android.support.constraint.ConstraintLayout>
 
