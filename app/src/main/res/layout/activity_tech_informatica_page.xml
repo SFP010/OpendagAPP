@@ -37,10 +37,11 @@
         android:text="Software can be found all around us. You are the specialist in creating complex software systems that work quickly, efficiently and securely. You can think of developing a app, but also analyzing large amounts of data. When developing these systems you come into contact with different languages. In the first year you learn how to program in Python and advanced programming languages ​​such as Java / C #. From the second year on, you choose which programming language you want to use. In addition to programming and developing various applications, you also learn to collaborate."
         android:textColor="#FFFFFF" />
 
-    <TextView
-        android:id="@+id/textView10"
+    <Button
+        android:id="@+id/btnOpendays"
         android:layout_width="289dp"
         android:layout_height="63dp"
+        android:background="#CC0033"
         android:layout_below="@+id/lijnview2"
         android:text="Upcoming openday:                                                  04/04/2019"
         android:textColor="#FFFFFF"
@@ -89,7 +90,7 @@
         android:layout_width="315dp"
 
         android:layout_height="3dp"
-        android:layout_below="@+id/textView10"
+        android:layout_below="@+id/btnOpendays"
         android:background="@android:color/white"
         ></View>
 
