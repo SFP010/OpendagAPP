@@ -44,15 +44,16 @@
         android:textColor="#FFFFFF"
         />
 
-    <TextView
-        android:id="@+id/textView10"
-        android:layout_width="289dp"
+    <Button
+        android:id="@+id/opendayButton"
+        android:layout_width="300dp"
         android:layout_height="63dp"
         android:layout_below="@+id/lijn4"
         android:layout_centerHorizontal="true"
+        android:background="#CC0033"
         android:text="Upcoming openday:                                                  04/04/2019"
         android:textColor="#FFFFFF"
-        android:textSize="24sp"
+        android:textSize="21sp"
          />
 
     <TextView
@@ -95,7 +96,7 @@ www.smartconnecting.nl."
     <View
         android:id="@+id/lijn5"
         android:layout_width="315dp"
-        android:layout_below="@+id/textView10"
+        android:layout_below="@+id/opendayButton"
         android:layout_height="3dp"
         android:background="@android:color/white"
         ></View>
