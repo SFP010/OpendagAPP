@@ -43,7 +43,7 @@ public class Route extends FragmentActivity implements OnMapReadyCallback {
 
         LatLng HRwijnhaven = new LatLng(51.917261, 4.484192);
         map.addMarker(new MarkerOptions().position(HRwijnhaven).title("HRwijnhaven"));
-        map.moveCamera(CameraUpdateFactory.newLatLng(HRwijnhaven));
+        map.moveCamera(CameraUpdateFactory.newLatLngZoom(HRwijnhaven,13));
     }
 
 }
