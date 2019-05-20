@@ -31,9 +31,10 @@
                 android:layout_marginEnd="9dp"
                 android:layout_marginRight="9dp"
                 android:background="#7f0000"
-                android:text="@string/School_tour_2"
+                android:text="School                20:00 - 21:00        All Floors
+        Tour                "
                 android:textColor="#ffffff"
-                android:textSize="20sp"
+                android:textSize="20dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/whatPlainText" />
@@ -48,9 +49,10 @@
                 android:layout_marginEnd="8dp"
                 android:layout_marginRight="8dp"
                 android:background="#7f0000"
-                android:text="@string/Directors_speech_2"
+                android:text="Director's          19:00 - 19:30       Base floor
+        Speech                                           Cafeteria"
                 android:textColor="#ffffff"
-                android:textSize="20sp"
+                android:textSize="20dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/act3TextView" />
@@ -65,7 +67,8 @@
                 android:layout_marginEnd="9dp"
                 android:layout_marginRight="9dp"
                 android:background="#7f0000"
-                android:text="@string/Exposition_of_projects_2"
+                android:text="Exposition of    17:00 - 18:30        4th floor
+        Projects                                             WD4.202"
                 android:textColor="#ffffff"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -83,7 +86,7 @@
                 android:layout_marginRight="9dp"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:text="@string/What_When_Where"
+                android:text="WHAT?             WHEN?             WHERE?"
                 android:textSize="22sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -100,7 +103,7 @@
                 android:layout_marginEnd="73dp"
                 android:layout_marginRight="73dp"
                 android:gravity="center_horizontal"
-                android:text="@string/INF_title_second_date"
+                android:text="Informatica open day February 23th"
                 android:textColor="#ffffff"
                 android:textSize="24sp"
                 android:textStyle="bold"
