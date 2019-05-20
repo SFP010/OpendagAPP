@@ -9,44 +9,41 @@ import android.widget.ImageView;
 
 import com.github.chrisbanes.photoview.PhotoView;
 
-public class Floorplans extends AppCompatActivity {
+public class Floorplans3 extends AppCompatActivity {
     Button HR_99;
     Button HR_103;
     Button HR_107;
 
-    //https://stackoverflow.com/questions/11393142/changing-imageview-on-button-click-android is what i used for buttons changing images.
-    //https://github.com/chrisbanes/PhotoView this is the github library i imported to zoom in on pictures.
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.floorplans_xml);
+        setContentView(R.layout.floorplans3);
 
         PhotoView photoView = findViewById(R.id.Plattegrond1);
-        photoView.setImageResource(R.drawable.bg99);
+        photoView.setImageResource(R.drawable.bg107);
 
         final ImageView imageView = (ImageView) findViewById(R.id.Plattegrond1);
-        imageView.setImageResource(R.drawable.bg99);
+        imageView.setImageResource(R.drawable.bg107);
 
         final Button FloorButtonbg = (Button) findViewById(R.id.Floor_plan_buttonbg);
 
         FloorButtonbg.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                imageView.setImageResource(R.drawable.bg99);
+                imageView.setImageResource(R.drawable.bg107);
             }
         });
         final Button FloorButton1 = (Button) findViewById(R.id.Floor_plan_button1);
 
         FloorButton1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                imageView.setImageResource(R.drawable.floor1_99);
+                imageView.setImageResource(R.drawable.floor1_107);
             }
         });
         final Button FloorButton2 = (Button) findViewById(R.id.Floor_plan_button2);
 
         FloorButton2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                imageView.setImageResource(R.drawable.floor2_99);
+                imageView.setImageResource(R.drawable.floor2_107);
             }
         });
 
@@ -54,7 +51,7 @@ public class Floorplans extends AppCompatActivity {
 
         FloorButton3.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                imageView.setImageResource(R.drawable.floor3_99);
+                imageView.setImageResource(R.drawable.floor3_107);
             }
         });
 
@@ -62,7 +59,7 @@ public class Floorplans extends AppCompatActivity {
 
         FloorButton4.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                imageView.setImageResource(R.drawable.floor4_99);
+                imageView.setImageResource(R.drawable.floor4_107);
             }
         });
 
@@ -70,7 +67,7 @@ public class Floorplans extends AppCompatActivity {
 
         FloorButton5.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                imageView.setImageResource(R.drawable.floor5_99);
+                imageView.setImageResource(R.drawable.floor5_107);
             }
         });
 
