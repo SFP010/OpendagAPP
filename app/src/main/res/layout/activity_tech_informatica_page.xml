@@ -13,9 +13,8 @@
         android:layout_width="368dp"
         android:layout_height="80dp"
         android:layout_below="@+id/lijnn"
-        android:text="We train you to be a software engineer. You get started with the development of software for various applications. You are able to analyze design and implement complex IT systems"
-        android:textColor="#FFFFFF"
-        />
+        android:text="@string/Tech_Informatica_info"
+        android:textColor="#FFFFFF" />
 
     <TextView
         android:id="@+id/textView7"
@@ -23,7 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/imageView5"
         android:layout_centerHorizontal="true"
-        android:text="Tech Informatica"
+        android:text="@string/Tech_Informatica"
         android:textColor="#FFFFFF"
         android:textSize="30sp" />
 
@@ -34,7 +33,7 @@
         android:layout_height="188dp"
         android:layout_below="@+id/lijnview1"
 
-        android:text="Software can be found all around us. You are the specialist in creating complex software systems that work quickly, efficiently and securely. You can think of developing a app, but also analyzing large amounts of data. When developing these systems you come into contact with different languages. In the first year you learn how to program in Python and advanced programming languages ​​such as Java / C #. From the second year on, you choose which programming language you want to use. In addition to programming and developing various applications, you also learn to collaborate."
+        android:text="@string/Tech_Informatica_info2"
         android:textColor="#FFFFFF" />
 
     <Button
@@ -43,18 +42,17 @@
         android:layout_height="63dp"
         android:background="#CC0033"
         android:layout_below="@+id/lijnview2"
-        android:text="Upcoming openday:                                                  04/04/2019"
-        android:textColor="#FFFFFF"
-        android:textSize="24sp"
         android:layout_centerHorizontal="true"
-         />
+        android:text="@string/Tech_informatica_openday"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp" />
 
     <TextView
         android:id="@+id/textView11"
         android:layout_width="388dp"
         android:layout_height="78dp"
         android:layout_below="@+id/view3"
-        android:text="Are you interested in new technological developments, curious, a little quirky and a go-getter, then the Computer Science course is for you!"
+        android:text="@string/Tech_Informatica_info3"
         android:textColor="#FFFFFF" />
 
 
