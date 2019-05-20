@@ -79,7 +79,7 @@ public class Communicatie3 extends AppCompatActivity {
             public void onClick(View view) {
                 Intent myIntent = new Intent(Intent.ACTION_SEND);
                 myIntent.setType("text/plain");
-                String shareBody = "Hi do you want to come to the openday with me?";
+                String shareBody = "Hi, 4th of April there is an open day of Communicatie, would you like to come with me? The address is Rotterdam Wijnhaven 107.";
                 String shareSub = "Openday";
                 myIntent.putExtra(Intent.EXTRA_SUBJECT,shareSub);
                 myIntent.putExtra(Intent.EXTRA_TEXT,shareBody);
@@ -92,7 +92,7 @@ public class Communicatie3 extends AppCompatActivity {
             public void onClick(View view) {
                 long startTime;
 
-                String startDate = "2019-01-05-13-15";
+                String startDate = "2019-04-04-13-15";
                 Calendar cal = Calendar.getInstance();
 
                 try{
