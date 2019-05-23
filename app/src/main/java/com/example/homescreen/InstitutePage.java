@@ -67,23 +67,15 @@ public class InstitutePage extends AppCompatActivity {
         });
 
 
-        Website = findViewById(R.id.website);
-        Website.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
 
-                Intent openweb = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.hogeschoolrotterdam.nl/"));
-                startActivity(openweb);
 
-            }
-        });
 
         Route = findViewById(R.id.route);
         Route.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                Intent oproute = new Intent(view.getContext(), Route.class);
+                Intent oproute = new Intent(view.getContext(), ContactPage.class);
                 startActivity(oproute);
             }
         });
