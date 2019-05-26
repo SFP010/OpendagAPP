@@ -57,4 +57,11 @@
     <string name="Tech_informatica_title">Technische Informatica Open Day</string>
     <string name="Tech_inf_first_date">April 4th, 2019</string>
     <string name="OpendagenText">Open dagen</string>
+    <string name="share_email_native" />
+    <string name="share_email_subject" />
+    <string name="share_chooser_text" />
+    <string name="share_twitter" />
+    <string name="share_facebook" />
+    <string name="share_sms" />
+    <string name="share_email_gmail" />
 </resources>
