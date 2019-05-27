@@ -7,7 +7,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import java.net.URI;
+
 public class ContactPage extends AppCompatActivity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +20,9 @@ public class ContactPage extends AppCompatActivity {
         Button websiteBtn = findViewById(R.id.website);
         Button routeBtn = findViewById(R.id.route);
         Button questionBtn = findViewById(R.id.question);
+
+
+
 
         routeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,6 +51,9 @@ public class ContactPage extends AppCompatActivity {
 
 
     }
+
+
+
     public void openRoute(){
         Intent intent = new Intent(this, Route.class);
         startActivity(intent);
