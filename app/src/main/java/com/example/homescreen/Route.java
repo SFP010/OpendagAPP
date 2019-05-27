@@ -42,7 +42,7 @@ public class Route extends FragmentActivity implements OnMapReadyCallback {
         map = googleMap;
 
         LatLng HRwijnhaven = new LatLng(51.917261, 4.484192);
-        map.addMarker(new MarkerOptions().position(HRwijnhaven).title("HRwijnhaven"));
+        map.addMarker(new MarkerOptions().position(HRwijnhaven).title("Hogeschool Rotterdam Wijnhaven"));
         map.moveCamera(CameraUpdateFactory.newLatLngZoom(HRwijnhaven,13));
     }
 
