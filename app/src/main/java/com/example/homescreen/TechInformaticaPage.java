@@ -59,6 +59,12 @@ public class TechInformaticaPage extends AppCompatActivity {
                     startActivityForResult(myIntent,0);
                     dl.closeDrawer(GravityCompat.START);
                 }
+                else if ( id == R.id.studychoice)
+                {
+                    Intent myIntent = new Intent(nav_view.getContext(), Study_test.class);
+                    startActivityForResult(myIntent,0);
+                    dl.closeDrawer(GravityCompat.START);
+                }
 
                 return true;
             }
