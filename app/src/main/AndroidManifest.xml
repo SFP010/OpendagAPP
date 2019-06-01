@@ -13,7 +13,26 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Study_test"></activity>
+        <activity android:name=".Study_test14"></activity>
+        <activity android:name=".Study_test13" />
+        <activity android:name=".Study_test12" />
+        <activity android:name=".Study_test11" />
+        <activity android:name=".Study_test10" />
+        <activity android:name=".Study_test9" />
+        <activity android:name=".Study_test8" />
+        <activity android:name=".Study_test7" />
+        <activity android:name=".Study_test6" />
+        <activity android:name=".Study_test5" />
+        <activity android:name=".Study_test4" />
+        <activity android:name=".Study_test3" />
+        <activity android:name=".Study_test_results" />
+
+        <meta-data
+            android:name="com.google.android.actions"
+            android:resource="@xml/customprogressbar" />
+
+        <activity android:name=".Study_test2" />
+        <activity android:name=".Study_test" />
         <activity android:name=".ContactPage" />
         <activity android:name=".Floorplans3" />
         <activity android:name=".Floorplans2" />
