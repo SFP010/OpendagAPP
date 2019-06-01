@@ -33,6 +33,8 @@
 
         <activity android:name=".Study_test2" />
         <activity android:name=".Study_test" />
+        <activity android:name=".CodingQuizInfo"></activity>
+        <activity android:name=".CodingQuiz" />
         <activity android:name=".ContactPage" />
         <activity android:name=".Floorplans3" />
         <activity android:name=".Floorplans2" />
