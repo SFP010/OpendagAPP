@@ -59,10 +59,8 @@
 
             <TextView
                 android:id="@+id/geninfo"
-                android:layout_width="360dp"
-                android:layout_height="164dp"
-                android:layout_width="358dp"
-                android:layout_height="137dp"
+                android:layout_width="362dp"
+                android:layout_height="168dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
                 android:text="Inside CMI we have the studies Communication(CO),Communication and Multimedia Design (CMD), Creative Media and Game Technologies (CMGT, Technical Informatica (TI) and Informatica (INF). The 'Stadslab' is also established in the building."
@@ -96,11 +94,13 @@
                 app:layout_constraintHorizontal_bias="0.13"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.58000004" />
+                app:layout_constraintVertical_bias="0.58000004" /><![CDATA[
                 app:layout_constraintHorizontal_bias="0.076"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.66" />
+
+            ]]>
 
             <Button
                 android:id="@+id/floor_plans"
@@ -117,45 +117,10 @@
                 android:textColor="#CC0033"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.92"
+                app:layout_constraintHorizontal_bias="0.88"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.58000004" />
-
-            <Button
-                android:id="@+id/route"
-                android:layout_width="147dp"
-                android:layout_height="50dp"
-                android:layout_marginTop="364dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginRight="8dp"
-                android:background="@drawable/custom_button"
-                android:text="floorplans"
-                android:textColor="#CC0033"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.756"
-                app:layout_constraintStart_toEndOf="@+id/opening_hours"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <Button
-                android:id="@+id/route"
-                android:layout_width="361dp"
-                android:layout_height="58dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginBottom="8dp"
-                android:background="@drawable/custom_button"
-                android:text="route"
-                android:textColor="#CC0033"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.13"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.72" />
 
             <Button
                 android:id="@+id/website"
@@ -165,30 +130,13 @@
                 android:textColor="#CC0033"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.507"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/opening_hours"
-                app:layout_constraintVertical_bias="0.191" />
+                app:layout_constraintVertical_bias="0.461" /><![CDATA[
 
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginBottom="8dp"
-                android:background="@drawable/custom_button"
-                android:text="website"
-                android:textColor="#CC0033"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.92"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.72" />
-                android:text="Institute"
+            android:text="Institute"
                 android:textColor="#FFFFFF"
                 android:textSize="24dp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -198,6 +146,7 @@
                 tools:layout_editor_absoluteX="168dp"
                 tools:layout_editor_absoluteY="140dp" />
 
+        ]]>
         </android.support.constraint.ConstraintLayout>
 
         <android.support.design.widget.NavigationView

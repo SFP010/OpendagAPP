@@ -1,6 +1,5 @@
 package com.example.homescreen;
 
-import android.content.ContentValues;
 import android.content.Intent;
 import android.provider.CalendarContract;
 import android.support.annotation.NonNull;
@@ -142,7 +141,7 @@ public class CMD2 extends AppCompatActivity {
                 startActivity(new Intent(CMD2.this, questionform.class ));
             }
         });
-        route = findViewById(R.id.route);
+        route = findViewById(R.id.floor_plans);
         route.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

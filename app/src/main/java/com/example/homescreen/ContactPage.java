@@ -7,8 +7,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import java.net.URI;
-
 public class ContactPage extends AppCompatActivity {
 
 
@@ -18,7 +16,7 @@ public class ContactPage extends AppCompatActivity {
         setContentView(R.layout.contact_page);
 
         Button websiteBtn = findViewById(R.id.website);
-        Button routeBtn = findViewById(R.id.route);
+        Button routeBtn = findViewById(R.id.floor_plans);
         Button questionBtn = findViewById(R.id.question);
 
 
