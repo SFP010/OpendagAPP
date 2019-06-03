@@ -86,6 +86,13 @@ public class TechnInform3 extends AppCompatActivity {
                     dl.closeDrawer(GravityCompat.START);
                 }
 
+                else if (id == R.id.contactpage) {
+                    Intent myintent = new Intent(nav_view.getContext(), ContactPage.class);
+                    startActivityForResult(myintent, 0);
+                    dl.closeDrawer(GravityCompat.START);
+                }
+
+
                 return true;
             }
         });
