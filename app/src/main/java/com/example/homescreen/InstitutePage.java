@@ -124,6 +124,16 @@ public class InstitutePage extends AppCompatActivity {
             }
         });
 
+        Website = findViewById(R.id.website);
+        Website.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent contact = new Intent(view.getContext(), ContactPage.class);
+                startActivity(contact);
+            }
+        });
+
     }
 
     @Override

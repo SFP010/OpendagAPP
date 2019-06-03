@@ -124,8 +124,9 @@
 
             <Button
                 android:id="@+id/website"
-                android:layout_width="147dp"
-                android:layout_height="50dp"
+                android:layout_width="298dp"
+                android:layout_height="56dp"
+                android:background="@drawable/custom_button"
                 android:text="Contact"
                 android:textColor="#CC0033"
                 app:layout_constraintBottom_toBottomOf="parent"
