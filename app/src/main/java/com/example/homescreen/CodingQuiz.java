@@ -14,7 +14,7 @@ public class CodingQuiz extends AppCompatActivity {
 
     TextView questionLabel, questionCountLabel, valuesLabel, scoreLabel;
     EditText answerEdt;
-    Button submitButton;
+    Button submitButton, restartButton;
     ProgressBar progressBar;
     ArrayList<QuestionModel> questionModelArrayList;
 
@@ -33,6 +33,7 @@ public class CodingQuiz extends AppCompatActivity {
 
         answerEdt = findViewById(R.id.answer);
         submitButton = findViewById(R.id.submit);
+        restartButton = findViewById(R.id.restart);
         progressBar = findViewById(R.id.progress);
 
         questionModelArrayList = new ArrayList<>();
@@ -44,6 +45,16 @@ public class CodingQuiz extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 checkAnswer();
+            }
+        });
+
+        restartButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                currentPosition = 0;
+                numberOfCorrectAnswers = 0;
+                progressBar.setProgress(0);
+                setData();
             }
         });
     }
@@ -70,26 +81,33 @@ public class CodingQuiz extends AppCompatActivity {
 
     public void setUpQuestion(){
 
-        questionModelArrayList.add(new QuestionModel("\n\nCODE\n\nX = 1\nY = X + 1\nZ = Y\nW = Z * (-...)", "\n\nVALUES\n\nW = -8\nX = 1\nY = 4\nZ = 4", "4"));
-        questionModelArrayList.add(new QuestionModel("\n\nCODE\n\nb = 5 * a\nc = (a + b) * b\nd = a + b - c * a\n\n What is c = ...?","\n\nVALUES\n\na = 3" , "270"));
-        questionModelArrayList.add(new QuestionModel("question 3","", "answer 3"));
-        questionModelArrayList.add(new QuestionModel("question 4","", "answer 4"));
-        questionModelArrayList.add(new QuestionModel("question 5","", "answer 5"));
-        questionModelArrayList.add(new QuestionModel("question 6","", "answer 6"));
-        questionModelArrayList.add(new QuestionModel("question 7","", "answer 7"));
-        questionModelArrayList.add(new QuestionModel("question 8","", "answer 8"));
-        questionModelArrayList.add(new QuestionModel("question 9","", "answer 9"));
-        questionModelArrayList.add(new QuestionModel("question 10","", "answer 10"));
+        questionModelArrayList.add(new QuestionModel("\nCODE\n\nx = 5\ny = 1\nx = 3\ny = x\n\nWhat is y = ...?","", "3"));
+        questionModelArrayList.add(new QuestionModel("\nCODE\n\nx = y + z\nz = x - y\n\nWhat is x = ...?", "\nVALUES\n\nx = 5\ny = 1\nz = 2", "3"));
+        questionModelArrayList.add(new QuestionModel("\nCODE\n\nx = 1\ny = x + 1\nz = y\nw = z * (-...?)", "\nVALUES\n\nw = -8\nx = 1\ny = 4\nz = 4", "4"));
+        questionModelArrayList.add(new QuestionModel("\nCODE\n\nb = 5 * a\nc = (a + b) * b\nd = a + b - c * a\n\n What is c = ...?","\nVALUES\n\na = 3" , "270"));
+        questionModelArrayList.add(new QuestionModel("\nCODE\n\na = x and y\nb = not x\nc = x or y\nWhat is b = ...?","\n\nVALUES\nx = True\ny = False", "False"));
+        questionModelArrayList.add(new QuestionModel("\nCODE\n\nz = x + \", \" + w + \"!\"\nb = k < -3\nc = k>= -4\nd = b and c\n\nWhat is z = ...?","\nVALUES\n\nx = \"Hello\"\nw = \"world\"\nk = int(\"-3\")\n", "\"Hello, world!\""));
+        questionModelArrayList.add(new QuestionModel("\nCODE\n\nyears = int(\"35\")\ngreet = ...? + ...? + ...?\nlength = len(greet)","\nVALUES\n\nhello = \"Hi\"\nname = \"John\"\ncomma = \", \"\nyears = 35\nlength = 8", "hello + comma + name"));
+        questionModelArrayList.add(new QuestionModel("\nCODE\n\nyears = int(\"35\")\ngreet = ... + ... + ...\nlength = len(greet)\nbool = length > 7","\nVALUES\n\nhello = \"Hi\"\nname = \"John\"\ncomma = \", \"\nyears = 35\nlength = 8\nbool = ...?", "True"));
+        questionModelArrayList.add(new QuestionModel("\nCODE\n\nif (x>y):\n\tz = z * 5 - 6\nelse:\n\tz = z * 10 + 5\n\nWhat is z = ...?","\nVALUES\n\nx = 3\n y = 7\n z = 10", "105"));
+        questionModelArrayList.add(new QuestionModel("\nCODE\n\nif (x>y):\n\ts = \"Max is x.\"\nelif (y>x):\n\ts = \"Max is y.\"\nelse:\n\ts = \"Numbers are equal.\"\n\nWhat is s = ...?","\nVALUES\n\n", "\"Max is x.\""));
 
     }
 
-    public void setData(){
+    public void setData() {
 
-        questionLabel.setText(questionModelArrayList.get(currentPosition).getQuestionString());
-        valuesLabel.setText(questionModelArrayList.get(currentPosition).getQuestionString2());
-        questionCountLabel.setText("Question No : " + (currentPosition+1));
-        scoreLabel.setText("Score : " + numberOfCorrectAnswers + "/" + questionModelArrayList.size());
+        if (questionModelArrayList.size() > currentPosition) {
 
+            questionLabel.setText(questionModelArrayList.get(currentPosition).getQuestionString());
+            valuesLabel.setText(questionModelArrayList.get(currentPosition).getQuestionString2());
+            questionCountLabel.setText("Question No : " + (currentPosition + 1));
+            scoreLabel.setText("Score : " + numberOfCorrectAnswers + "/" + questionModelArrayList.size());
+
+        } else {
+
+            questionLabel.setText("\n\nYou have finished\nthe quiz!\n\nThis is your score :\n\n"+numberOfCorrectAnswers+" out of "+questionModelArrayList.size());
+            valuesLabel.setText("ANSWERS\n\n1. 3\n2. 3\n3. 4\n4. 270\n5. False\n6. \"Hello, world!\"\n7. hello + comma + name\n8. True\n9. 105\n10. \"Max is x.\"");
+        }
     }
 
 }
