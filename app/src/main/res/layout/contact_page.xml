@@ -120,7 +120,10 @@
         android:layout_marginTop="27dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:text="Call 0623287137"
+        android:text="Phone number 0623287137"
+        android:textSize="24dp"
+        android:background="#CC0033"
+        android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView19" />
