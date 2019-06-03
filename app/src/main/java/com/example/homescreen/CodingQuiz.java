@@ -12,7 +12,7 @@ import java.util.ArrayList;
 
 public class CodingQuiz extends AppCompatActivity {
 
-    TextView questionLabel, questionCountLabel, scoreLabel;
+    TextView questionLabel, questionCountLabel, valuesLabel, scoreLabel;
     EditText answerEdt;
     Button submitButton;
     ProgressBar progressBar;
@@ -28,6 +28,7 @@ public class CodingQuiz extends AppCompatActivity {
 
         questionCountLabel = findViewById(R.id.questionNo);
         questionLabel = findViewById(R.id.codeQuest);
+        valuesLabel = findViewById(R.id.codeQuest2);
         scoreLabel = findViewById(R.id.score);
 
         answerEdt = findViewById(R.id.answer);
@@ -69,22 +70,23 @@ public class CodingQuiz extends AppCompatActivity {
 
     public void setUpQuestion(){
 
-        questionModelArrayList.add(new QuestionModel("question 1", "answer 1"));
-        questionModelArrayList.add(new QuestionModel("question 2", "answer 2"));
-        questionModelArrayList.add(new QuestionModel("question 3", "answer 3"));
-        questionModelArrayList.add(new QuestionModel("question 4", "answer 4"));
-        questionModelArrayList.add(new QuestionModel("question 5", "answer 5"));
-        questionModelArrayList.add(new QuestionModel("question 6", "answer 6"));
-        questionModelArrayList.add(new QuestionModel("question 7", "answer 7"));
-        questionModelArrayList.add(new QuestionModel("question 8", "answer 8"));
-        questionModelArrayList.add(new QuestionModel("question 9", "answer 9"));
-        questionModelArrayList.add(new QuestionModel("question 10", "answer 10"));
+        questionModelArrayList.add(new QuestionModel("\n\nCODE\n\nX = 1\nY = X + 1\nZ = Y\nW = Z * (-...)", "\n\nVALUES\n\nW = -8\nX = 1\nY = 4\nZ = 4", "4"));
+        questionModelArrayList.add(new QuestionModel("\n\nCODE\n\nb = 5 * a\nc = (a + b) * b\nd = a + b - c * a\n\n What is c = ...?","\n\nVALUES\n\na = 3" , "270"));
+        questionModelArrayList.add(new QuestionModel("question 3","", "answer 3"));
+        questionModelArrayList.add(new QuestionModel("question 4","", "answer 4"));
+        questionModelArrayList.add(new QuestionModel("question 5","", "answer 5"));
+        questionModelArrayList.add(new QuestionModel("question 6","", "answer 6"));
+        questionModelArrayList.add(new QuestionModel("question 7","", "answer 7"));
+        questionModelArrayList.add(new QuestionModel("question 8","", "answer 8"));
+        questionModelArrayList.add(new QuestionModel("question 9","", "answer 9"));
+        questionModelArrayList.add(new QuestionModel("question 10","", "answer 10"));
 
     }
 
     public void setData(){
 
         questionLabel.setText(questionModelArrayList.get(currentPosition).getQuestionString());
+        valuesLabel.setText(questionModelArrayList.get(currentPosition).getQuestionString2());
         questionCountLabel.setText("Question No : " + (currentPosition+1));
         scoreLabel.setText("Score : " + numberOfCorrectAnswers + "/" + questionModelArrayList.size());
 
