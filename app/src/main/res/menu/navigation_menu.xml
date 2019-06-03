@@ -20,11 +20,28 @@
 
     </item>
     <item
+        android:id= "@+id/studychoice"
+        android:title="Study choice test"
+        android:icon="@drawable/baseline_done_black_24dp">
+
+    </item>
+    <item
+        android:id= "@+id/codingquiz"
+        android:title="Code Quiz"
+        android:icon="@drawable/baseline_done_black_24dp">
+
+    </item>
+    <item
         android:id= "@+id/mysocial"
-        android:title="Contact"
+        android:title="@string/Questions"
         android:icon="@drawable/ic_mail_black_24dp">
 
     </item>
+    <item
+        android:id="@+id/contactpage"
+        android:icon="@drawable/ic_mail_black_24dp"
+        android:title="Contact"></item>
+
 
 
 

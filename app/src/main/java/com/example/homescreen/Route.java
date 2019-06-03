@@ -28,6 +28,49 @@ public class Route extends FragmentActivity implements OnMapReadyCallback {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.route_xml);
+        dl = (DrawerLayout) findViewById(R.id.dl);
+        abdt = new ActionBarDrawerToggle(this, dl, R.string.Open, R.string.Close);
+        abdt.setDrawerIndicatorEnabled(true);
+
+        dl.addDrawerListener(abdt);
+        abdt.syncState();
+
+
+        final NavigationView nav_view = (NavigationView) findViewById(R.id.nav_view);
+
+        nav_view.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                int id = menuItem.getItemId();
+                if (id == R.id.myprofile) {
+                    Intent myIntent = new Intent(nav_view.getContext(), HomeScreen.class);
+                    startActivityForResult(myIntent, 0);
+                    dl.closeDrawer(GravityCompat.START);
+                } else if (id == R.id.mysettings) {
+                    Intent myIntent = new Intent(nav_view.getContext(), Studies.class);
+                    startActivityForResult(myIntent, 0);
+                    dl.closeDrawer(GravityCompat.START);
+                } else if (id == R.id.myedit) {
+                    Intent myIntent = new Intent(nav_view.getContext(), InstitutePage.class);
+                    startActivityForResult(myIntent, 0);
+                    dl.closeDrawer(GravityCompat.START);
+                } else if (id == R.id.mysocial) {
+                    Intent myIntent = new Intent(nav_view.getContext(), questionform.class);
+                    startActivityForResult(myIntent, 0);
+                    dl.closeDrawer(GravityCompat.START);
+                } else if (id == R.id.codingquiz) {
+                    Intent myIntent = new Intent(nav_view.getContext(), CodingQuizInfo.class);
+                    startActivityForResult(myIntent, 0);
+                    dl.closeDrawer(GravityCompat.START);
+                } else if ( id == R.id.studychoice) {
+                    Intent myIntent = new Intent(nav_view.getContext(), Study_test.class);
+                    startActivityForResult(myIntent, 0);
+                    dl.closeDrawer(GravityCompat.START);
+                }
+
+                return true;
+            }
+        });
 
 
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
@@ -42,8 +85,12 @@ public class Route extends FragmentActivity implements OnMapReadyCallback {
         map = googleMap;
 
         LatLng HRwijnhaven = new LatLng(51.917261, 4.484192);
-        map.addMarker(new MarkerOptions().position(HRwijnhaven).title("HRwijnhaven"));
+        map.addMarker(new MarkerOptions().position(HRwijnhaven).title("Hogeschool Rotterdam Wijnhaven"));
         map.moveCamera(CameraUpdateFactory.newLatLngZoom(HRwijnhaven,13));
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        return abdt.onOptionsItemSelected(item) || super.onOptionsItemSelected(item);
     }
 
 }

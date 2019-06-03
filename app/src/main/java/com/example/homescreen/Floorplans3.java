@@ -71,6 +71,14 @@ public class Floorplans3 extends AppCompatActivity {
             }
         });
 
+        final Button FloorButton6 = (Button) findViewById(R.id.Floor_plan_button6);
+
+        FloorButton6.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                imageView.setImageResource(R.drawable.floor6_107);
+            }
+        });
+
         HR_99 = findViewById(R.id.HR_99);
         HR_99.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CodingQuiz"
+    android:orientation="vertical"
+    android:background="#CC0033">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#CC01"
+        android:orientation="vertical">
+
+        <ProgressBar
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:progress="10"
+            android:progressTint="#ffffff"
+            android:id="@+id/progress"
+            />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/questionNo"
+                android:text="Question No : "
+                android:textColor="#ffffff"
+                android:textSize="12dp"
+                android:layout_alignParentLeft="true"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/score"
+                android:text="Score : "
+                android:textColor="#ffffff"
+                android:textSize="12dp"
+                android:layout_alignParentRight="true"
+                />
+        </RelativeLayout>
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp">
+
+            <TextView
+                android:id="@+id/codeQuest"
+                android:layout_width="195dp"
+                android:layout_height="300dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="-2dp"
+                android:layout_marginRight="-2dp"
+                android:layout_toStartOf="@+id/codeQuest2"
+                android:layout_toLeftOf="@+id/codeQuest2"
+                android:background="#ffffff"
+                android:gravity="clip_vertical"
+                android:text="... coding question..."
+                android:textColor="#000000"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/codeQuest2"
+                android:layout_width="208dp"
+                android:layout_height="300dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:background="#ffffff"
+                android:gravity="clip_vertical"
+                android:text="... coding question..."
+                android:textColor="#000000"
+                android:textSize="20dp" />
+        </RelativeLayout>
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:id="@+id/answer"
+            android:hint="Write your answer"
+            android:textColorHint="#ffffff" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/submit"
+            android:layout_margin="10dp"
+            android:background="@drawable/custom_button"
+            android:text="Submit"
+            android:textColor="#CC0033"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>
+

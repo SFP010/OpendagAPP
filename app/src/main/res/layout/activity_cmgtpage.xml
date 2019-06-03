@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CC0033"
+    tools:context=".CMGTpage">
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/dl"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:context=".Homescreen">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lijn2"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="38dp"
+                android:layout_marginRight="38dp"
+                android:text="Creative technologists invent and develop innovative products, where the user is central. You differentiate yourself from other programmers by your level of creativity and your knowledge and sense of interaction between devices and people
+"
+                android:textColor="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.116"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="335dp"
+                android:layout_height="102dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="38dp"
+                android:layout_marginLeft="38dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="38dp"
+                android:layout_marginRight="38dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/appz" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageView2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="88dp"
+                android:layout_marginLeft="88dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="89dp"
+                android:layout_marginRight="89dp"
+                android:text="CMGT"
+                android:textColor="#FFFFFF"
+                android:textSize="30sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="374dp"
+                android:layout_height="149dp"
+                android:layout_below="@id/lijn3"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="6dp"
+                android:layout_marginRight="6dp"
+                android:text="As a CMGT person you are a developer of interactive digital products: you develop web and mobile applications and you know the basics of developing games. However, the boundaries between these digital products and the physical world are becoming increasingly blurred and faster. You are therefore not trained as a specialist in 1 specific programming language or platform, but as a flexible programmer who can quickly master the possibilities of a new language or platform (smartphone, game console, Internet of Things)."
+                android:textColor="#FFFFFF"
+                app:layout_constraintEnd_toStartOf="@+id/textView11"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+            <Button
+                android:id="@+id/opendayButton"
+                android:layout_width="300dp"
+                android:layout_height="63dp"
+                android:layout_below="@+id/lijn4"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="1dp"
+                android:layout_marginRight="1dp"
+                android:background="@drawable/custom_button"
+                android:text="Upcoming openday:                                                  04/04/2019"
+                android:textColor="#CC0033"
+                android:textSize="21sp"
+                app:layout_constraintEnd_toStartOf="@+id/textView11"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lijn4" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="390dp"
+                android:layout_height="79dp"
+                android:layout_below="@+id/lijn5"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="23dp"
+                android:text="The Communication course teaches you to touch, connect and move people as a smart connector.
+
+Curious? Stories from the training can be found on our platform
+www.smartconnecting.nl."
+                android:textColor="#FFFFFF"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lijn5" />
+
+
+            <View
+                android:id="@+id/lijn3"
+                android:layout_width="315dp"
+                android:layout_height="3dp"
+                android:layout_below="@+id/textView8"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginEnd="91dp"
+                android:layout_marginRight="91dp"
+                android:background="@android:color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView8"></View>
+
+            <View
+                android:id="@+id/lijn4"
+                android:layout_width="315dp"
+                android:layout_height="3dp"
+                android:layout_below="@+id/textView9"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="91dp"
+                android:layout_marginRight="91dp"
+                android:background="@android:color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView9"></View>
+
+            <View
+                android:id="@+id/lijn5"
+                android:layout_width="315dp"
+                android:layout_height="3dp"
+                android:layout_below="@+id/opendayButton"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="91dp"
+                android:layout_marginRight="91dp"
+                android:background="@android:color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/opendayButton"></View>
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.design.widget.NavigationView
+            android:id="@+id/nav_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            app:headerLayout="@layout/navigation_header"
+            app:menu="@menu/navigation_menu">
+
+
+        </android.support.design.widget.NavigationView>
+
+    </android.support.v4.widget.DrawerLayout>
+
+
+</android.support.constraint.ConstraintLayout>
