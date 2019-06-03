@@ -28,7 +28,7 @@ public class InformaticaOpendag3 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.informatica_opendag2);
+        setContentView(R.layout.informatica_opendag3);
         dl = (DrawerLayout)findViewById(R.id.dl);
         abdt = new ActionBarDrawerToggle(this, dl,R.string.Open, R.string.Close);
         abdt.setDrawerIndicatorEnabled(true);
