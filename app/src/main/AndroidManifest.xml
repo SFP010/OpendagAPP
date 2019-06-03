@@ -13,7 +13,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Study_test14"></activity>
+        <activity android:name=".CMDpage"></activity>
+        <activity android:name=".CMGTpage" />
+        <activity android:name=".Study_test14" />
         <activity android:name=".Study_test13" />
         <activity android:name=".Study_test12" />
         <activity android:name=".Study_test11" />
@@ -33,7 +35,7 @@
 
         <activity android:name=".Study_test2" />
         <activity android:name=".Study_test" />
-        <activity android:name=".CodingQuizInfo"></activity>
+        <activity android:name=".CodingQuizInfo" />
         <activity android:name=".CodingQuiz" />
         <activity android:name=".ContactPage" />
         <activity android:name=".Floorplans3" />
