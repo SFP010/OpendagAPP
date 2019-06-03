@@ -69,6 +69,11 @@ public class  HomeScreen extends AppCompatActivity {
                     startActivityForResult(myIntent,0);
                     dl.closeDrawer(GravityCompat.START);
                 }
+                else if (id == R.id.codingquiz) {
+                    Intent myIntent = new Intent(nav_view.getContext(), CodingQuizInfo.class);
+                    startActivityForResult(myIntent, 0);
+                    dl.closeDrawer(GravityCompat.START);
+                }
 
                 return true;
             }
