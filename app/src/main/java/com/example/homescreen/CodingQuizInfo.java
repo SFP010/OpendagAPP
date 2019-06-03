@@ -22,16 +22,6 @@ public class CodingQuizInfo extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.coding_quiz_info);
 
-        startquiz = findViewById(R.id.startQuiz);
-
-        startquiz.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openQuiz();
-            }
-        });
-
-
         dl = (DrawerLayout) findViewById(R.id.dl);
         abdt = new ActionBarDrawerToggle(this, dl, R.string.Open, R.string.Close);
         abdt.setDrawerIndicatorEnabled(true);
@@ -67,17 +57,28 @@ public class CodingQuizInfo extends AppCompatActivity {
                     Intent myIntent = new Intent(nav_view.getContext(), CodingQuizInfo.class);
                     startActivityForResult(myIntent, 0);
                     dl.closeDrawer(GravityCompat.START);
+                } else if ( id == R.id.studychoice) {
+                    Intent myIntent = new Intent(nav_view.getContext(), Study_test.class);
+                    startActivityForResult(myIntent, 0);
+                    dl.closeDrawer(GravityCompat.START);
                 }
 
                 return true;
             }
         });
 
-    }
 
-    public void openQuiz() {
-        Intent intent = new Intent(this, CodingQuiz.class);
-        startActivity(intent);
+        startquiz = findViewById(R.id.startQuiz);
+        startquiz.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(CodingQuizInfo.this, CodingQuiz.class));
+            }
+        });
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        return abdt.onOptionsItemSelected(item) || super.onOptionsItemSelected(item);
     }
 
 }
