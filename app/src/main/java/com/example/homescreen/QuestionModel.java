@@ -2,6 +2,10 @@ package com.example.homescreen;
 
 public class QuestionModel {
 
+    private String QuestionString;
+    private String QuestionString2;
+    private String Answer;
+
     public QuestionModel(String questionString, String questionString2, String answer){
         QuestionString = questionString;
         QuestionString2 = questionString2;
@@ -18,8 +22,6 @@ public class QuestionModel {
 
     public void setAnswer(String answer) { Answer = answer; }
 
-    private String QuestionString;
-    private String QuestionString2;
-    private String Answer;
+
 
 }
