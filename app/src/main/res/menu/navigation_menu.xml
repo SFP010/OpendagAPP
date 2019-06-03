@@ -33,11 +33,15 @@
     </item>
     <item
         android:id= "@+id/mysocial"
-        android:title="Contact"
+        android:title="@string/Questions"
         android:icon="@drawable/ic_mail_black_24dp">
 
     </item>
-
+    <item
+        android:id="@+id/contactpage"
+        android:title="ContactNew"
+        android:icon="@drawable/ic_mail_black_24dp"
+        ></item>
 
 
 
