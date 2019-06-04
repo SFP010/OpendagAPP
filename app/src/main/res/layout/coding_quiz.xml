@@ -72,7 +72,7 @@
             <TextView
                 android:id="@+id/codeQuest"
                 android:layout_width="195dp"
-                android:layout_height="300dp"
+                android:layout_height="320dp"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
@@ -89,7 +89,7 @@
             <TextView
                 android:id="@+id/codeQuest2"
                 android:layout_width="208dp"
-                android:layout_height="300dp"
+                android:layout_height="320dp"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
@@ -117,6 +117,17 @@
             android:background="@drawable/custom_button"
             android:text="Submit"
             android:textColor="#CC0033"/>
+
+        <Button
+            android:id="@+id/restart"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/custom_button"
+            android:text="Restart"
+            android:layout_gravity="center_horizontal"
+            android:textColor="#CC0033" />
 
     </LinearLayout>
 
