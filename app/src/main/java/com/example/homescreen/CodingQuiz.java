@@ -63,34 +63,35 @@ public class CodingQuiz extends AppCompatActivity {
 
         String answerString = answerEdt.getText().toString().trim();
 
-        if(answerString.equalsIgnoreCase(questionModelArrayList.get(currentPosition).getAnswer())){
-            numberOfCorrectAnswers ++;
-            currentPosition++;
-            setData();
-            answerEdt.setText("");
-        }
-        else{
-            currentPosition++;
-            setData();
-            answerEdt.setText("");
-        }
+        if(questionModelArrayList.size() > currentPosition) {
+            if (answerString.equalsIgnoreCase(questionModelArrayList.get(currentPosition).getAnswer()) && (answerString !="")) {
+                numberOfCorrectAnswers++;
+                currentPosition++;
+                setData();
+                answerEdt.setText("");
+            } else if (answerString != "") {
+                currentPosition++;
+                setData();
+                answerEdt.setText("");
+            }
+        } else {}
 
-        int x = ((currentPosition+1) * 100) / questionModelArrayList.size();
+        int x = ((currentPosition) * 100) / questionModelArrayList.size();
         progressBar.setProgress(x);
     }
 
     public void setUpQuestion(){
 
-        questionModelArrayList.add(new QuestionModel("\nCODE\n\nx = 5\ny = 1\nx = 3\ny = x\n\nWhat is y = ...?","", "3"));
-        questionModelArrayList.add(new QuestionModel("\nCODE\n\nx = y + z\nz = x - y\n\nWhat is x = ...?", "\nVALUES\n\nx = 5\ny = 1\nz = 2", "3"));
-        questionModelArrayList.add(new QuestionModel("\nCODE\n\nx = 1\ny = x + 1\nz = y\nw = z * (-...?)", "\nVALUES\n\nw = -8\nx = 1\ny = 4\nz = 4", "4"));
-        questionModelArrayList.add(new QuestionModel("\nCODE\n\nb = 5 * a\nc = (a + b) * b\nd = a + b - c * a\n\n What is c = ...?","\nVALUES\n\na = 3" , "270"));
-        questionModelArrayList.add(new QuestionModel("\nCODE\n\na = x and y\nb = not x\nc = x or y\nWhat is b = ...?","\n\nVALUES\nx = True\ny = False", "False"));
-        questionModelArrayList.add(new QuestionModel("\nCODE\n\nz = x + \", \" + w + \"!\"\nb = k < -3\nc = k>= -4\nd = b and c\n\nWhat is z = ...?","\nVALUES\n\nx = \"Hello\"\nw = \"world\"\nk = int(\"-3\")\n", "\"Hello, world!\""));
-        questionModelArrayList.add(new QuestionModel("\nCODE\n\nyears = int(\"35\")\ngreet = ...? + ...? + ...?\nlength = len(greet)","\nVALUES\n\nhello = \"Hi\"\nname = \"John\"\ncomma = \", \"\nyears = 35\nlength = 8", "hello + comma + name"));
-        questionModelArrayList.add(new QuestionModel("\nCODE\n\nyears = int(\"35\")\ngreet = ... + ... + ...\nlength = len(greet)\nbool = length > 7","\nVALUES\n\nhello = \"Hi\"\nname = \"John\"\ncomma = \", \"\nyears = 35\nlength = 8\nbool = ...?", "True"));
-        questionModelArrayList.add(new QuestionModel("\nCODE\n\nif (x>y):\n\tz = z * 5 - 6\nelse:\n\tz = z * 10 + 5\n\nWhat is z = ...?","\nVALUES\n\nx = 3\n y = 7\n z = 10", "105"));
-        questionModelArrayList.add(new QuestionModel("\nCODE\n\nif (x>y):\n\ts = \"Max is x.\"\nelif (y>x):\n\ts = \"Max is y.\"\nelse:\n\ts = \"Numbers are equal.\"\n\nWhat is s = ...?","\nVALUES\n\n", "\"Max is x.\""));
+        questionModelArrayList.add(new QuestionModel("\n\tCODE\n\n\tx = 5\n\ty = 1\n\tx = 3\n\ty = x\n\n\tWhat is y = ...?","", "3"));
+        questionModelArrayList.add(new QuestionModel("\n\tCODE\n\n\tx = y + z\n\tz = x - y\n\n\tWhat is x = ...?", "\n\tVALUES\n\n\tx = 5\n\ty = 1\n\tz = 2", "3"));
+        questionModelArrayList.add(new QuestionModel("\n\tCODE\n\n\tx = 1\n\ty = x + 1\n\tz = y\n\tw = z * (-...?)", "\n\tVALUES\n\n\tw = -8\n\tx = 1\n\ty = 4\n\tz = 4", "4"));
+        questionModelArrayList.add(new QuestionModel("\n\tCODE\n\n\tb = 5 * a\n\tc = (a + b) * b\n\td = a + b - c * a\n\n\tWhat is c = ...?","\n\tVALUES\n\n\ta = 3" , "270"));
+        questionModelArrayList.add(new QuestionModel("\n\tCODE\n\n\ta = x and y\n\tb = not x\n\tc = x or y\n\tWhat is b = ...?","\n\n\tVALUES\n\tx = True\n\ty = False", "False"));
+        questionModelArrayList.add(new QuestionModel("\n\tCODE\n\n\tz = x + \", \" + w + \"!\"\n\tb = k < -3\n\tc = k>= -4\n\td = b and c\n\n\tWhat is z = ...?","\n\tVALUES\n\n\tx = \"Hello\"\n\tw = \"world\"\n\tk = int(\"-3\")", "\"Hello, world!\""));
+        questionModelArrayList.add(new QuestionModel("\n\tCODE\n\n\tyears = int(\"35\")\n\tgreet = ...? + ...? + ...?\n\tlength = len(greet)","\n\tVALUES\n\n\thello = \"Hi\"\n\tname = \"John\"\n\tcomma = \", \"\n\tyears = 35\n\tlength = 8", "hello + comma + name"));
+        questionModelArrayList.add(new QuestionModel("\n\tCODE\n\n\tyears = int(\"35\")\n\tgreet = ... + ... + ...\n\tlength = len(greet)\n\tbool = length > 7","\n\tVALUES\n\n\thello = \"Hi\"\n\tname = \"John\"\n\tcomma = \", \"\n\tyears = 35\n\tlength = 8\n\tbool = ...?", "True"));
+        questionModelArrayList.add(new QuestionModel("\n\tCODE\n\n\tif (x>y):\n\t\tz = z * 5 - 6\n\telse:\n\tz = z * 10 + 5\n\n\tWhat is z = ...?","\n\tVALUES\n\n\tx = 3\n\t y = 7\n\tz = 10", "105"));
+        questionModelArrayList.add(new QuestionModel("\n\tCODE\n\n\tif (x>y):\n\t\ts = \"Max is x.\"\n\telif (y>x):\n\ts = \"Max is y.\"\n\telse:\n\ts = \"Numbers are equal.\"\n\n\tWhat is s = ...?","\n\tVALUES\n\n", "\"Max is x.\""));
 
     }
 
@@ -103,9 +104,8 @@ public class CodingQuiz extends AppCompatActivity {
             questionCountLabel.setText("Question No : " + (currentPosition + 1));
             scoreLabel.setText("Score : " + numberOfCorrectAnswers + "/" + questionModelArrayList.size());
 
-        } else {
-
-            questionLabel.setText("\n\nYou have finished\nthe quiz!\n\nThis is your score :\n\n"+numberOfCorrectAnswers+" out of "+questionModelArrayList.size());
+        }  else {
+            questionLabel.setText("\n\n\tYou have finished\n\tthe quiz!\n\n\tThis is your score :\n\n\t"+numberOfCorrectAnswers+" out of "+questionModelArrayList.size());
             valuesLabel.setText("ANSWERS\n\n1. 3\n2. 3\n3. 4\n4. 270\n5. False\n6. \"Hello, world!\"\n7. hello + comma + name\n8. True\n9. 105\n10. \"Max is x.\"");
         }
     }
