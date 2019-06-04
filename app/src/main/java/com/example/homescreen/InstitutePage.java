@@ -91,7 +91,13 @@ public class InstitutePage extends AppCompatActivity {
 
 
 
-
+        Button studiesBTN = findViewById(R.id.Studybutton);
+        studiesBTN.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openStudies();
+            }
+        });
 
         Route = findViewById(R.id.floor_plans);
         Route.setOnClickListener(new View.OnClickListener() {
@@ -140,6 +146,10 @@ public class InstitutePage extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         return abdt.onOptionsItemSelected(item) || super.onOptionsItemSelected(item);
 
+    }
+    public void openStudies() {
+        Intent intent = new Intent(this, Studies.class);
+        startActivity(intent);
     }
 }
 
