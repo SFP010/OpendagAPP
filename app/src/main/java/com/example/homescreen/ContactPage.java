@@ -13,8 +13,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
-import java.net.URI;
-
 public class ContactPage extends AppCompatActivity {
     private DrawerLayout dl;
     private ActionBarDrawerToggle abdt;
@@ -71,7 +69,7 @@ public class ContactPage extends AppCompatActivity {
 
 
         Button websiteBtn = findViewById(R.id.website);
-        Button routeBtn = findViewById(R.id.route);
+        Button routeBtn = findViewById(R.id.floor_plans);
         Button questionBtn = findViewById(R.id.question);
 
 

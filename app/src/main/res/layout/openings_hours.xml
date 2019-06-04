@@ -38,7 +38,7 @@
             android:layout_height="47dp"
             android:background="#B9FFFFFF"
             android:textSize="16sp"
-            android:text="                               Wijnhaven 99-103         Wijnhaven 107" />
+            android:text="                         Wijnhaven 99-103        Wijnhaven 107" />
 
         <TextView
             android:id="@+id/textView13"
@@ -46,7 +46,7 @@
             android:layout_height="44dp"
             android:background="#F2FFFFFF"
             android:textSize="17sp"
-            android:text="  Monday                 07:30 - 19:30             7:30 - 22:00" />
+            android:text="  Monday             07:30 - 19:30        7:30 - 22:00" />
 
         <TextView
             android:id="@+id/textView14"
@@ -54,7 +54,7 @@
             android:layout_height="44dp"
             android:background="#F2FFFFFF"
             android:textSize="17sp"
-            android:text="  Tuesday                07:30 - 21:00             7:30 - 21:00" />
+            android:text="  Tuesday            07:30 - 21:00         7:30 - 21:00" />
 
         <TextView
             android:id="@+id/textView17"
@@ -62,7 +62,7 @@
             android:layout_height="44dp"
             android:background="#F2FFFFFF"
             android:textSize="17sp"
-            android:text="  Wednesday          07:30 - 19:30             7:30 - 22:00" />
+            android:text="  Wednesday      07:30 - 19:30         7:30 - 22:00" />
 
         <TextView
             android:id="@+id/textView16"
@@ -70,7 +70,7 @@
             android:layout_height="44dp"
             android:background="#F2FFFFFF"
             android:textSize="17sp"
-            android:text="  Thursday              07:30 - 19:30             7:30 - 19:30" />
+            android:text="  Thursday          07:30 - 19:30         7:30 - 19:30" />
 
         <TextView
             android:id="@+id/textView15"
@@ -78,7 +78,7 @@
             android:layout_height="44dp"
             android:background="#F2FFFFFF"
             android:textSize="17sp"
-            android:text="  Friday                    07:30 - 17:30             7:30 - 17:30" />
+            android:text="  Friday                07:30 - 17:30         7:30 - 17:30" />
 
     </LinearLayout>
 

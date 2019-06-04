@@ -74,8 +74,8 @@
 
             <TextView
                 android:id="@+id/textView9"
-                android:layout_width="376dp"
-                android:layout_height="123dp"
+                android:layout_width="393dp"
+                android:layout_height="196dp"
                 android:layout_below="@id/lijn3"
                 android:layout_marginStart="7dp"
                 android:layout_marginLeft="7dp"

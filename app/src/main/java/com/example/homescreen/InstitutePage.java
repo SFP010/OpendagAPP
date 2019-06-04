@@ -1,7 +1,6 @@
 package com.example.homescreen;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -94,7 +93,7 @@ public class InstitutePage extends AppCompatActivity {
 
 
 
-        Route = findViewById(R.id.route);
+        Route = findViewById(R.id.floor_plans);
         Route.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -122,6 +121,16 @@ public class InstitutePage extends AppCompatActivity {
                 Intent opfloor = new Intent(view.getContext(), Floorplans.class);
                 startActivity(opfloor);
 
+            }
+        });
+
+        Website = findViewById(R.id.website);
+        Website.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent contact = new Intent(view.getContext(), ContactPage.class);
+                startActivity(contact);
             }
         });
 
