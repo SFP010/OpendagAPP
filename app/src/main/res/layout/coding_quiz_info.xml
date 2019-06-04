@@ -32,10 +32,10 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginRight="8dp"
-                android:text="Welcome to the coding quiz. In this game you will see simple code examples where a random field is left blank. Now it is up to you to fill in the correct answer.\n\nIn the quiz you will see two sides of information. THe left side displays the code with a blank field.
-        The right side will display the values for the variables.\n\nTo gain some more insight see the example below."
+                android:text="Welcome to the coding quiz. In this game you will see simple code examples where a random field is left blank. Now it is up to you to fill in the correct answer.\n\nIn the quiz you will see two sides of information. The left side displays the code with a blank field.
+The right side will display the values for the variables.\n\nTo gain some more insight see the example below:"
                 android:textColor="#ffffff"
-                android:textSize="16dp"
+                android:textSize="17dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -50,9 +50,9 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginRight="8dp"
-                android:text="If you had the answer ‘4’, this is correct.\n\nNow we have done enough explaining. Start the quiz and good luck!"
+                android:text="Answer '4' is correct.\n\nNow we have done enough explaining. Start the quiz and good luck!"
                 android:textColor="#ffffff"
-                android:textSize="16dp"
+                android:textSize="17dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
