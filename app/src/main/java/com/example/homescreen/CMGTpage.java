@@ -12,18 +12,14 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
-public class InstitutePage extends AppCompatActivity {
-    Button Route;
-    Button Website;
-    Button Floorplans;
-    Button Openingshours;
+public class CMGTpage extends AppCompatActivity {
     private DrawerLayout dl;
     private ActionBarDrawerToggle abdt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_institute_page);
+        setContentView(R.layout.activity_cmgtpage);
         dl = (DrawerLayout) findViewById(R.id.dl);
         abdt = new ActionBarDrawerToggle(this, dl, R.string.Open, R.string.Close);
         abdt.setDrawerIndicatorEnabled(true);
@@ -43,47 +39,27 @@ public class InstitutePage extends AppCompatActivity {
                     Intent myIntent = new Intent(nav_view.getContext(), HomeScreen.class);
                     startActivityForResult(myIntent, 0);
                     dl.closeDrawer(GravityCompat.START);
-
-                }
-                else if (id == R.id.mysettings) {
+                } else if (id == R.id.mysettings) {
                     Intent myIntent = new Intent(nav_view.getContext(), Studies.class);
                     startActivityForResult(myIntent, 0);
                     dl.closeDrawer(GravityCompat.START);
-                }
-                else if (id == R.id.myedit) {
+                } else if (id == R.id.myedit) {
                     Intent myIntent = new Intent(nav_view.getContext(), InstitutePage.class);
                     startActivityForResult(myIntent, 0);
                     dl.closeDrawer(GravityCompat.START);
-                }
-                else if (id == R.id.mysocial) {
+                } else if (id == R.id.mysocial) {
                     Intent myIntent = new Intent(nav_view.getContext(), questionform.class);
                     startActivityForResult(myIntent, 0);
                     dl.closeDrawer(GravityCompat.START);
-                }
-                else if ( id == R.id.studychoice)
-                {
-                    Intent myIntent = new Intent(nav_view.getContext(), Study_test.class);
-                    startActivityForResult(myIntent,0);
-                    dl.closeDrawer(GravityCompat.START);
-                }
-                else if ( id == R.id.studychoice)
-                {
-                    Intent myIntent = new Intent(nav_view.getContext(), Study_test.class);
-                    startActivityForResult(myIntent,0);
-                    dl.closeDrawer(GravityCompat.START);
-                }
-                else if (id == R.id.codingquiz) {
+                } else if (id == R.id.codingquiz) {
                     Intent myIntent = new Intent(nav_view.getContext(), CodingQuizInfo.class);
                     startActivityForResult(myIntent, 0);
                     dl.closeDrawer(GravityCompat.START);
-                }
-
-                else if (id == R.id.contactpage) {
-                    Intent myintent = new Intent(nav_view.getContext(), ContactPage.class);
-                    startActivityForResult(myintent, 0);
+                } else if ( id == R.id.studychoice) {
+                    Intent myIntent = new Intent(nav_view.getContext(), Study_test.class);
+                    startActivityForResult(myIntent, 0);
                     dl.closeDrawer(GravityCompat.START);
                 }
-
 
                 return true;
             }
@@ -91,57 +67,24 @@ public class InstitutePage extends AppCompatActivity {
 
 
 
-
-
-        Route = findViewById(R.id.floor_plans);
-        Route.setOnClickListener(new View.OnClickListener() {
+        Button opendayBTN = findViewById(R.id.opendayButton);
+        opendayBTN.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-
-                Intent oproute = new Intent(view.getContext(), ContactPage.class);
-                startActivity(oproute);
-            }
-        });
-
-        Openingshours = findViewById(R.id.opening_hours);
-        Openingshours.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                Intent opening = new Intent(view.getContext(), openingsHours.class);
-                startActivity(opening);
-            }
-        });
-
-        Floorplans = findViewById(R.id.floor_plans);
-        Floorplans.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                Intent opfloor = new Intent(view.getContext(), Floorplans.class);
-                startActivity(opfloor);
-
-            }
-        });
-
-        Website = findViewById(R.id.website);
-        Website.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                Intent contact = new Intent(view.getContext(), ContactPage.class);
-                startActivity(contact);
+            public void onClick(View v) {
+                openOpenday();
             }
         });
 
     }
 
+    public void openOpenday() {
+        Intent intent = new Intent(this, CreativeMGT1.class);
+        startActivity(intent);
+    }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         return abdt.onOptionsItemSelected(item) || super.onOptionsItemSelected(item);
-
     }
+
+
 }
-
-
-

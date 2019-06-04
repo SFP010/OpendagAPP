@@ -1,6 +1,5 @@
 package com.example.homescreen;
 
-import android.content.ContentValues;
 import android.content.Intent;
 import android.provider.CalendarContract;
 import android.support.annotation.NonNull;
@@ -80,6 +79,13 @@ public class InformaticaOpendag3 extends AppCompatActivity {
                     dl.closeDrawer(GravityCompat.START);
                 }
 
+                else if (id == R.id.contactpage) {
+                    Intent myintent = new Intent(nav_view.getContext(), ContactPage.class);
+                    startActivityForResult(myintent, 0);
+                    dl.closeDrawer(GravityCompat.START);
+                }
+
+
                 return true;
             }
         });
@@ -135,7 +141,7 @@ public class InformaticaOpendag3 extends AppCompatActivity {
                 startActivity(new Intent(InformaticaOpendag3.this, questionform.class ));
             }
         });
-        route = findViewById(R.id.route);
+        route = findViewById(R.id.floor_plans);
         route.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

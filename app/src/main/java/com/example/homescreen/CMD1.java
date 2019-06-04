@@ -1,6 +1,5 @@
 package com.example.homescreen;
 
-import android.content.ContentValues;
 import android.content.Intent;
 import android.net.Uri;
 import android.provider.CalendarContract;
@@ -81,6 +80,13 @@ public class CMD1 extends AppCompatActivity {
                     startActivityForResult(myIntent, 0);
                     dl.closeDrawer(GravityCompat.START);
                 }
+
+                else if (id == R.id.contactpage) {
+                    Intent myintent = new Intent(nav_view.getContext(), ContactPage.class);
+                    startActivityForResult(myintent, 0);
+                    dl.closeDrawer(GravityCompat.START);
+                }
+
 
                 return true;
             }
@@ -191,7 +197,7 @@ public class CMD1 extends AppCompatActivity {
                 startActivity(new Intent(CMD1.this, questionform.class ));
             }
         });
-        route = findViewById(R.id.route);
+        route = findViewById(R.id.floor_plans);
         route.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

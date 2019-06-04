@@ -17,25 +17,14 @@
         android:orientation="vertical"
         android:id="@+id/dl">
 
-        <android.support.design.widget.NavigationView
-            android:id="@+id/nav_view"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_gravity="start"
-            app:headerLayout="@layout/navigation_header"
-            app:menu="@menu/navigation_menu">
-
-
-        </android.support.design.widget.NavigationView>
-
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <TextView
                 android:id="@+id/textView2"
-                android:layout_width="399dp"
-                android:layout_height="99dp"
+                android:layout_width="403dp"
+                android:layout_height="108dp"
                 android:layout_marginStart="5dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginEnd="8dp"
@@ -78,8 +67,8 @@
 
             <TextView
                 android:id="@+id/textView"
-                android:layout_width="399dp"
-                android:layout_height="135dp"
+                android:layout_width="410dp"
+                android:layout_height="158dp"
                 android:layout_marginEnd="15dp"
                 android:layout_marginRight="15dp"
                 android:gravity="center_horizontal"
@@ -117,6 +106,17 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
         </android.support.constraint.ConstraintLayout>
+
+        <android.support.design.widget.NavigationView
+            android:id="@+id/nav_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            app:headerLayout="@layout/navigation_header"
+            app:menu="@menu/navigation_menu">
+
+
+        </android.support.design.widget.NavigationView>
 
     </android.support.v4.widget.DrawerLayout>
 

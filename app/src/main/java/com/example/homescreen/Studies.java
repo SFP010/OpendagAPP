@@ -78,6 +78,13 @@ public class Studies extends AppCompatActivity {
                     dl.closeDrawer(GravityCompat.START);
                 }
 
+                else if (id == R.id.contactpage) {
+                    Intent myintent = new Intent(nav_view.getContext(), ContactPage.class);
+                    startActivityForResult(myintent, 0);
+                    dl.closeDrawer(GravityCompat.START);
+                }
+
+
                 return true;
             }
         });
@@ -85,6 +92,22 @@ public class Studies extends AppCompatActivity {
         Button informaticaBtn = findViewById(R.id.informaticaClick);
         Button techInformaticaBtn = findViewById(R.id.techinformaticaClick);
         Button communicationBtn = findViewById(R.id.communicationClick);
+        Button cmgtBtn = findViewById(R.id.cmgtbutton);
+        Button cmdBtn = findViewById(R.id.button4);
+
+        cmdBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openCmd();
+            }
+        });
+
+        cmgtBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openCMGTpage();
+            }
+        });
 
         informaticaBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -126,6 +149,17 @@ public class Studies extends AppCompatActivity {
 
 
     }
+
+    public void openCMGTpage(){
+        Intent intent = new Intent(this, CMGTpage.class);
+        startActivity(intent);
+    }
+
+    public void openCmd(){
+        Intent intent = new Intent(this, CMDpage.class);
+        startActivity(intent);
+    }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         return abdt.onOptionsItemSelected(item) || super.onOptionsItemSelected(item);
