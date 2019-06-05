@@ -68,13 +68,13 @@
                     <Button
                         android:id="@+id/informaticaClick"
                         style="@style/Widget.AppCompat.Button.Borderless"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="147dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/custom_button"
                         android:gravity="center"
                         android:text="Computer Science"
-                        android:background="@drawable/custom_button"
                         android:textColor="#CC0033"
-                        android:textSize="20sp" />
+                        android:textSize="14sp" />
 
                     <TextView
                         android:id="@+id/textView5"
@@ -86,12 +86,12 @@
                     <Button
                         android:id="@+id/communicationClick"
                         style="@style/Widget.AppCompat.Button.Borderless"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Communication"
+                        android:layout_width="147dp"
+                        android:layout_height="50dp"
                         android:background="@drawable/custom_button"
+                        android:text="Communication"
                         android:textColor="#CC0033"
-                        android:textSize="20sp" />
+                        android:textSize="14sp" />
 
                     <TextView
                         android:id="@+id/textView6"
@@ -103,13 +103,13 @@
                     <Button
                         android:id="@+id/techinformaticaClick"
                         style="@style/Widget.AppCompat.Button.Borderless"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="147dp"
+                        android:layout_height="50dp"
                         android:background="@drawable/custom_button"
                         android:hint="Click for more"
                         android:text="Computer engineering"
                         android:textColor="#CC0033"
-                        android:textSize="20sp" />
+                        android:textSize="14sp" />
 
                     <TextView
                         android:id="@+id/textView4"
@@ -121,12 +121,12 @@
                     <Button
                         android:id="@+id/cmgtbutton"
                         style="@style/Widget.AppCompat.Button.Borderless"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="147dp"
+                        android:layout_height="50dp"
                         android:background="@drawable/custom_button"
                         android:text="CMGT"
                         android:textColor="#CC0033"
-                        android:textSize="20sp" />
+                        android:textSize="14sp" />
 
                     <TextView
                         android:id="@+id/textView18"
@@ -137,12 +137,12 @@
 
                     <Button
                         android:id="@+id/button4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="147dp"
+                        android:layout_height="50dp"
                         android:background="@drawable/custom_button"
                         android:text="CMD"
                         android:textColor="#CC0033"
-                        android:textSize="20sp" />
+                        android:textSize="14sp" />
 
                     <TextView
                         android:id="@+id/textView19"
