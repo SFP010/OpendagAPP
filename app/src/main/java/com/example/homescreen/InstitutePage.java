@@ -1,7 +1,6 @@
 package com.example.homescreen;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -79,15 +78,28 @@ public class InstitutePage extends AppCompatActivity {
                     dl.closeDrawer(GravityCompat.START);
                 }
 
+                else if (id == R.id.contactpage) {
+                    Intent myintent = new Intent(nav_view.getContext(), ContactPage.class);
+                    startActivityForResult(myintent, 0);
+                    dl.closeDrawer(GravityCompat.START);
+                }
+
+
                 return true;
             }
         });
 
 
 
+        Button studiesBTN = findViewById(R.id.Studybutton);
+        studiesBTN.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openStudies();
+            }
+        });
 
-
-        Route = findViewById(R.id.route);
+        Route = findViewById(R.id.floor_plans);
         Route.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -118,12 +130,26 @@ public class InstitutePage extends AppCompatActivity {
             }
         });
 
+        Website = findViewById(R.id.website);
+        Website.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent contact = new Intent(view.getContext(), ContactPage.class);
+                startActivity(contact);
+            }
+        });
+
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         return abdt.onOptionsItemSelected(item) || super.onOptionsItemSelected(item);
 
+    }
+    public void openStudies() {
+        Intent intent = new Intent(this, Studies.class);
+        startActivity(intent);
     }
 }
 

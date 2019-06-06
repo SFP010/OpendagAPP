@@ -27,20 +27,30 @@
 
             <ImageView
                 android:id="@+id/imageView"
-                android:layout_width="157dp"
-                android:layout_height="140dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginEnd="124dp"
-                android:layout_marginRight="124dp"
-                android:layout_marginBottom="5dp"
+                android:layout_width="126dp"
+                android:layout_height="92dp"
+                android:layout_marginStart="145dp"
+                android:layout_marginLeft="145dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="145dp"
+                android:layout_marginRight="145dp"
                 android:contentDescription="CMILogo"
-                app:layout_constraintBottom_toTopOf="@+id/scrollView2"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.975"
+                app:layout_constraintHorizontal_bias="0.6"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/cmi" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Studies"
+                android:textSize="24dp"
+                android:textColor="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
             <ScrollView
                 android:id="@+id/scrollView2"
@@ -68,13 +78,13 @@
                     <Button
                         android:id="@+id/informaticaClick"
                         style="@style/Widget.AppCompat.Button.Borderless"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="#ff0040"
+                        android:layout_width="147dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/custom_button"
                         android:gravity="center"
                         android:text="Computer Science"
-                        android:textColor="#FFFFFF"
-                        android:textSize="20sp" />
+                        android:textColor="#CC0033"
+                        android:textSize="14sp" />
 
                     <TextView
                         android:id="@+id/textView5"
@@ -86,12 +96,12 @@
                     <Button
                         android:id="@+id/communicationClick"
                         style="@style/Widget.AppCompat.Button.Borderless"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="#ff0040"
+                        android:layout_width="147dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/custom_button"
                         android:text="Communication"
-                        android:textColor="#FFFFFF"
-                        android:textSize="20sp" />
+                        android:textColor="#CC0033"
+                        android:textSize="14sp" />
 
                     <TextView
                         android:id="@+id/textView6"
@@ -103,13 +113,13 @@
                     <Button
                         android:id="@+id/techinformaticaClick"
                         style="@style/Widget.AppCompat.Button.Borderless"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="#ff0040"
+                        android:layout_width="147dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/custom_button"
                         android:hint="Click for more"
                         android:text="Computer engineering"
-                        android:textColor="#FFFFFF"
-                        android:textSize="20sp" />
+                        android:textColor="#CC0033"
+                        android:textSize="14sp" />
 
                     <TextView
                         android:id="@+id/textView4"
@@ -121,12 +131,12 @@
                     <Button
                         android:id="@+id/cmgtbutton"
                         style="@style/Widget.AppCompat.Button.Borderless"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="#ff0040"
+                        android:layout_width="147dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/custom_button"
                         android:text="CMGT"
-                        android:textColor="#ffffff"
-                        android:textSize="20sp" />
+                        android:textColor="#CC0033"
+                        android:textSize="14sp" />
 
                     <TextView
                         android:id="@+id/textView18"
@@ -137,12 +147,12 @@
 
                     <Button
                         android:id="@+id/button4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="#ff0040"
+                        android:layout_width="147dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/custom_button"
                         android:text="CMD"
-                        android:textColor="#ffffff"
-                        android:textSize="20sp" />
+                        android:textColor="#CC0033"
+                        android:textSize="14sp" />
 
                     <TextView
                         android:id="@+id/textView19"

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CommunicationPage"
+    tools:context=".CMDpage"
     android:background="#CC0033">
+
     <android.support.v4.widget.DrawerLayout
         android:id="@+id/dl"
         android:layout_width="0dp"
@@ -24,17 +24,17 @@
 
             <TextView
                 android:id="@+id/textView8"
-                android:layout_width="368dp"
-                android:layout_height="80dp"
+                android:layout_width="382dp"
+                android:layout_height="51dp"
                 android:layout_below="@+id/lijn2"
-                android:layout_marginStart="5dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
                 android:layout_marginEnd="38dp"
                 android:layout_marginRight="38dp"
-                android:text="Do you have a keen eye and ear for the stories of people and brands? Are you creative with text and image and fascinated by the world of media? Then the Communication course is for you!"
+                android:text="Studying with us often looks different. As a designer you do not sit in the traditional school desks. We work together in the studio for real clients."
                 android:textColor="#FFFFFF"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
@@ -55,8 +55,8 @@
 
             <TextView
                 android:id="@+id/textView7"
-                android:layout_width="254dp"
-                android:layout_height="47dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_below="@+id/imageView2"
                 android:layout_centerHorizontal="true"
                 android:layout_marginStart="88dp"
@@ -64,7 +64,7 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="89dp"
                 android:layout_marginRight="89dp"
-                android:text="Communication"
+                android:text="CMD"
                 android:textColor="#FFFFFF"
                 android:textSize="30sp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -74,15 +74,15 @@
 
             <TextView
                 android:id="@+id/textView9"
-                android:layout_width="374dp"
-                android:layout_height="149dp"
+                android:layout_width="393dp"
+                android:layout_height="196dp"
                 android:layout_below="@id/lijn3"
-                android:layout_marginStart="5dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginStart="7dp"
+                android:layout_marginLeft="7dp"
+                android:layout_marginTop="14dp"
                 android:layout_marginEnd="6dp"
                 android:layout_marginRight="6dp"
-                android:text="Our Communication course trains you in four years to what we - proudly - call a smart connector. A professional who ensures smart connections. With the use of social tools, storytelling, big data and co-creation, for example. You develop creative concepts such as media campaigns, events and story platforms. Based on good research, theory and strategy and of course your own surprising ideas."
+                android:text="The first-year students now focus on the elderly who experience physical or psychological health problems to a greater or lesser extent and need informal care. The client is looking for smart, new technological applications that the elderly, with the help of informal caregivers, can make living at home longer."
                 android:textColor="#FFFFFF"
                 app:layout_constraintEnd_toStartOf="@+id/textView11"
                 app:layout_constraintHorizontal_bias="0.0"
@@ -120,10 +120,7 @@
                 android:layout_marginEnd="16dp"
                 android:layout_marginRight="16dp"
                 android:layout_marginBottom="23dp"
-                android:text="The Communication course teaches you to touch, connect and move people as a smart connector.
-
-Curious? Stories from the training can be found on our platform
-www.smartconnecting.nl."
+                android:text="The CMD course challenges you to use your knowledge, creativity and design talent for interactive products and services that make the life and environment of users more pleasant or even improve.."
                 android:textColor="#FFFFFF"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -138,6 +135,7 @@ www.smartconnecting.nl."
                 android:layout_below="@+id/textView8"
                 android:layout_marginStart="5dp"
                 android:layout_marginLeft="5dp"
+                android:layout_marginTop="8dp"
                 android:layout_marginEnd="91dp"
                 android:layout_marginRight="91dp"
                 android:background="@android:color/white"
@@ -189,7 +187,5 @@ www.smartconnecting.nl."
         </android.support.design.widget.NavigationView>
 
     </android.support.v4.widget.DrawerLayout>
-
-
 
 </android.support.constraint.ConstraintLayout>

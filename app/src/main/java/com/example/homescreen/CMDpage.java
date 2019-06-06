@@ -3,7 +3,6 @@ package com.example.homescreen;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -12,26 +11,15 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 
-import com.google.android.gms.maps.CameraUpdateFactory;
-import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.OnMapReadyCallback;
-import com.google.android.gms.maps.SupportMapFragment;
-import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.MarkerOptions;
-
-public class Route extends FragmentActivity implements OnMapReadyCallback {
-    EditText title1, title2;
-    GoogleMap map;
-    Button routeOption;
+public class CMDpage extends AppCompatActivity {
     private DrawerLayout dl;
     private ActionBarDrawerToggle abdt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.route_xml);
+        setContentView(R.layout.activity_cmdpage);
         dl = (DrawerLayout) findViewById(R.id.dl);
         abdt = new ActionBarDrawerToggle(this, dl, R.string.Open, R.string.Close);
         abdt.setDrawerIndicatorEnabled(true);
@@ -39,6 +27,7 @@ public class Route extends FragmentActivity implements OnMapReadyCallback {
         dl.addDrawerListener(abdt);
         abdt.syncState();
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         final NavigationView nav_view = (NavigationView) findViewById(R.id.nav_view);
 
@@ -76,37 +65,24 @@ public class Route extends FragmentActivity implements OnMapReadyCallback {
             }
         });
 
-        routeOption = findViewById(R.id.routeOption);
-        title1 = findViewById(R.id.editText);
-        title1.setEnabled(false);
-        title2 = findViewById(R.id.editText2);
-        title2.setEnabled(false);
 
-        routeOption.setOnClickListener(new View.OnClickListener() {
+
+        Button opendayBTN = findViewById(R.id.opendayButton);
+        opendayBTN.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                
+                openOpenday();
             }
         });
 
-        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
-                .findFragmentById(R.id.map);
-        mapFragment.getMapAsync(this);
-
-
     }
 
-    @Override
-    public void onMapReady(GoogleMap googleMap) {
-        map = googleMap;
-
-        LatLng HRwijnhaven = new LatLng(51.917261, 4.484192);
-        map.addMarker(new MarkerOptions().position(HRwijnhaven).title("Hogeschool Rotterdam Wijnhaven"));
-        map.moveCamera(CameraUpdateFactory.newLatLngZoom(HRwijnhaven,13));
+    public void openOpenday() {
+        Intent intent = new Intent(this, CMD1.class);
+        startActivity(intent);
     }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         return abdt.onOptionsItemSelected(item) || super.onOptionsItemSelected(item);
     }
-
 }

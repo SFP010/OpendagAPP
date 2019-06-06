@@ -7,19 +7,32 @@
     android:layout_height="match_parent"
     android:background="#CC0033"
     tools:context=".ContactPage">
+    <android.support.v4.widget.DrawerLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:context=".Homescreen"
+        android:orientation="vertical"
+        android:id="@+id/dl">
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/textView19"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="405dp"
+                android:layout_height="70dp"
 
-        android:layout_marginTop="196dp"
-        android:text="If you got a question about a study, the institue, study choice or admittance to a program, you can send an e-mail with the “Questions” button below. If you have a more urgent question you can call the te telepone number stated below. "
-        android:textColor="#FFFFFF"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+                android:layout_marginTop="196dp"
+                android:text="If you got a question about a study, the institue, study choice or admittance to a program, you can send an e-mail with the “Questions” button below. If you have a more urgent question you can call the te telepone number stated below. "
+                android:textColor="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView10"
@@ -47,7 +60,8 @@
         android:layout_marginTop="123dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:background="#ffffff"
+        android:background="@drawable/custom_button"
+        android:textColor="#CC0033"
         android:text="@string/Website"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.459"
@@ -55,7 +69,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView18" />
 
     <Button
-        android:id="@+id/route"
+        android:id="@+id/floor_plans"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -63,7 +77,8 @@
         android:layout_marginTop="123dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:background="#FFFFFF"
+        android:background="@drawable/custom_button"
+        android:textColor="#CC0033"
         android:text="@string/Route"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.925"
@@ -77,7 +92,8 @@
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="123dp"
-        android:background="#FFFFFF"
+        android:background="@drawable/custom_button"
+        android:textColor="#CC0033"
         android:text="@string/Questions"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView18" />
@@ -96,30 +112,48 @@
         app:layout_constraintTop_toBottomOf="@+id/textView10"
         app:srcCompat="@drawable/contact" />
 
-    <TextView
-        android:id="@+id/textView18"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="96dp"
-        android:text="You can also vistit the school at Wijnhaven 107, 3031WN Rotterdam. More information on how to get there is on the route page."
-        android:textColor="#FFFFFF"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView19" />
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="406dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="96dp"
+                android:text="You can also vistit the school at Wijnhaven 107, 3031WN Rotterdam. More information on how to get there is on the route page."
+                android:textColor="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView19" />
 
-    <Button
-        android:id="@+id/bellen"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="27dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:text="Call 0623287137"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView19" />
+            <Button
+                android:id="@+id/bellen"
+                android:layout_width="147"
+                android:layout_height="50"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="27dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/custom_button"
+                android:text="Call 0623287137"
+                android:textColor="#CC0033"
+                android:textSize="14dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView19" />
+        </android.support.constraint.ConstraintLayout>
+        <android.support.design.widget.NavigationView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/nav_view"
+            android:layout_gravity= "start"
+            app:headerLayout="@layout/navigation_header"
+            app:menu="@menu/navigation_menu">
+
+
+
+        </android.support.design.widget.NavigationView>
+
+    </android.support.v4.widget.DrawerLayout>
+
 
 </android.support.constraint.ConstraintLayout>

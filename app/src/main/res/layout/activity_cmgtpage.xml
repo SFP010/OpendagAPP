@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CommunicationPage"
-    android:background="#CC0033">
+    android:background="#CC0033"
+    tools:context=".CMGTpage">
+
     <android.support.v4.widget.DrawerLayout
         android:id="@+id/dl"
         android:layout_width="0dp"
@@ -24,17 +24,19 @@
 
             <TextView
                 android:id="@+id/textView8"
-                android:layout_width="368dp"
-                android:layout_height="80dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_below="@+id/lijn2"
-                android:layout_marginStart="5dp"
-                android:layout_marginLeft="5dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="38dp"
                 android:layout_marginRight="38dp"
-                android:text="Do you have a keen eye and ear for the stories of people and brands? Are you creative with text and image and fascinated by the world of media? Then the Communication course is for you!"
+                android:text="Creative technologists invent and develop innovative products, where the user is central. You differentiate yourself from other programmers by your level of creativity and your knowledge and sense of interaction between devices and people
+"
                 android:textColor="#FFFFFF"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.116"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
@@ -55,8 +57,8 @@
 
             <TextView
                 android:id="@+id/textView7"
-                android:layout_width="254dp"
-                android:layout_height="47dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_below="@+id/imageView2"
                 android:layout_centerHorizontal="true"
                 android:layout_marginStart="88dp"
@@ -64,7 +66,7 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="89dp"
                 android:layout_marginRight="89dp"
-                android:text="Communication"
+                android:text="CMGT"
                 android:textColor="#FFFFFF"
                 android:textSize="30sp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -74,15 +76,15 @@
 
             <TextView
                 android:id="@+id/textView9"
-                android:layout_width="374dp"
-                android:layout_height="149dp"
+                android:layout_width="389dp"
+                android:layout_height="183dp"
                 android:layout_below="@id/lijn3"
-                android:layout_marginStart="5dp"
-                android:layout_marginLeft="5dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="6dp"
                 android:layout_marginRight="6dp"
-                android:text="Our Communication course trains you in four years to what we - proudly - call a smart connector. A professional who ensures smart connections. With the use of social tools, storytelling, big data and co-creation, for example. You develop creative concepts such as media campaigns, events and story platforms. Based on good research, theory and strategy and of course your own surprising ideas."
+                android:text="As a CMGT person you are a developer of interactive digital products: you develop web and mobile applications and you know the basics of developing games. However, the boundaries between these digital products and the physical world are becoming increasingly blurred and faster. You are therefore not trained as a specialist in 1 specific programming language or platform, but as a flexible programmer who can quickly master the possibilities of a new language or platform (smartphone, game console, Internet of Things)."
                 android:textColor="#FFFFFF"
                 app:layout_constraintEnd_toStartOf="@+id/textView11"
                 app:layout_constraintHorizontal_bias="0.0"
@@ -111,19 +113,16 @@
 
             <TextView
                 android:id="@+id/textView11"
-                android:layout_width="390dp"
-                android:layout_height="79dp"
+                android:layout_width="395dp"
+                android:layout_height="111dp"
                 android:layout_below="@+id/lijn5"
-                android:layout_marginStart="5dp"
-                android:layout_marginLeft="5dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginRight="16dp"
                 android:layout_marginBottom="23dp"
-                android:text="The Communication course teaches you to touch, connect and move people as a smart connector.
-
-Curious? Stories from the training can be found on our platform
-www.smartconnecting.nl."
+                android:text="CMGT students work with students of the Communication and Multimedia Design course at certain times. This collaboration is important because when developing interactive solutions, collaboration with other creative specialists, such as designers and strategists, leads to higher end quality."
                 android:textColor="#FFFFFF"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -189,7 +188,6 @@ www.smartconnecting.nl."
         </android.support.design.widget.NavigationView>
 
     </android.support.v4.widget.DrawerLayout>
-
 
 
 </android.support.constraint.ConstraintLayout>

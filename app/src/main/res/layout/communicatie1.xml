@@ -67,8 +67,7 @@
                 android:layout_marginEnd="9dp"
                 android:layout_marginRight="9dp"
                 android:background="#7f0000"
-                android:text="Exposition of    17:00 - 18:30        4th floor
-        Projects                                             WD4.202"
+                android:text="Exposition      17:00 - 18:30      4th floor   of Projects                                  WD4.202"
                 android:textColor="#ffffff"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -95,15 +94,15 @@
 
             <TextView
                 android:id="@+id/infOpenDay"
-                android:layout_width="251dp"
-                android:layout_height="75dp"
+                android:layout_width="262dp"
+                android:layout_height="98dp"
                 android:layout_marginStart="87dp"
                 android:layout_marginLeft="87dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="73dp"
                 android:layout_marginRight="73dp"
                 android:gravity="center_horizontal"
-                android:text="Communication open day 23th december 2018"
+                android:text="Communication open day 3th december 2018"
                 android:textColor="#ffffff"
                 android:textSize="24sp"
                 android:textStyle="bold"
@@ -125,7 +124,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/ShareIt" />
 
             <Button
-                android:id="@+id/route"
+                android:id="@+id/floor_plans"
                 android:layout_width="147dp"
                 android:layout_height="50dp"
                 android:layout_marginStart="16dp"
@@ -169,7 +168,7 @@
                 android:textColor="#CC0033"
                 app:layout_constraintEnd_toStartOf="@+id/Questions"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/route" />
+                app:layout_constraintTop_toBottomOf="@+id/floor_plans" />
         </android.support.constraint.ConstraintLayout>
 
         <android.support.design.widget.NavigationView
