@@ -155,7 +155,7 @@ public class CodingQuiz extends AppCompatActivity {
             questionCountLabel.setText("Question No : " + (currentPosition + 1));
             scoreLabel.setText("Score : " + numberOfCorrectAnswers + "/" + questionModelArrayList.size());
 
-        }  else {
+        } else {
             questionLabel.setText("\n\nYou have finished\nthe quiz!\n\nThis is your score :\n\n"+numberOfCorrectAnswers+" out of "+questionModelArrayList.size());
             if (getScore() != 0){
                 valuesLabel.setText("Your highscore is : "+String.valueOf(getScore()));
