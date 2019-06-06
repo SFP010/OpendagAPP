@@ -126,8 +126,8 @@
 
             <Button
                 android:id="@+id/bellen"
-                android:layout_width="147"
-                android:layout_height="50"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
                 android:layout_marginTop="27dp"

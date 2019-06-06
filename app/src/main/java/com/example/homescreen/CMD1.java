@@ -201,7 +201,7 @@ public class CMD1 extends AppCompatActivity {
                 startActivity(new Intent(CMD1.this, questionform.class ));
             }
         });
-        route = findViewById(R.id.floor_plans);
+        route = findViewById(R.id.route);
         route.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
