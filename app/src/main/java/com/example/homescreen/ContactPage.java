@@ -71,6 +71,18 @@ public class ContactPage extends AppCompatActivity {
         Button websiteBtn = findViewById(R.id.website);
         Button routeBtn = findViewById(R.id.floor_plans);
         Button questionBtn = findViewById(R.id.question);
+        Button callBtn = findViewById(R.id.bellen);
+
+
+        callBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent calling = new Intent(Intent.ACTION_DIAL);
+                calling.setData(Uri.parse("tel:0623287137"));
+                startActivity(calling);
+            }
+        });
 
 
 
