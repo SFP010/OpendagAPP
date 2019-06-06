@@ -69,65 +69,110 @@
             android:layout_marginRight="5dp"
             android:layout_marginBottom="5dp">
 
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="match_parent"
+                android:layout_height="318dp"
+                app:srcCompat="@drawable/white_background" />
+
             <TextView
                 android:id="@+id/codeQuest"
-                android:layout_width="195dp"
-                android:layout_height="320dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginEnd="-2dp"
-                android:layout_marginRight="-2dp"
-                android:layout_toStartOf="@+id/codeQuest2"
-                android:layout_toLeftOf="@+id/codeQuest2"
+                android:layout_width="165dp"
+                android:layout_height="294dp"
+                android:layout_alignStart="@+id/imageView7"
+                android:layout_alignLeft="@+id/imageView7"
+                android:layout_alignTop="@+id/imageView7"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="130dp"
+                android:layout_marginLeft="130dp"
+                android:layout_marginTop="13dp"
+                android:layout_marginEnd="107dp"
+                android:layout_marginRight="107dp"
                 android:background="#ffffff"
-                android:gravity="clip_vertical"
-                android:text="... coding question..."
+                android:gravity="left"
+                android:text="... code..."
                 android:textColor="#000000"
                 android:textSize="20dp" />
 
-            <TextView
-                android:id="@+id/codeQuest2"
-                android:layout_width="208dp"
-                android:layout_height="320dp"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                android:background="#ffffff"
-                android:gravity="clip_vertical"
-                android:text="... coding question..."
-                android:textColor="#000000"
-                android:textSize="20dp" />
+
         </RelativeLayout>
+
+        <TextView
+            android:id="@+id/codeQuest2"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="#9b0000"
+            android:gravity="center"
+            android:text="... coding question..."
+            android:textColor="#ffffff"
+            android:textSize="20dp" />
 
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp"
             android:id="@+id/answer"
             android:hint="Write your answer"
-            android:textColorHint="#ffffff" />
+            android:textColorHint="#ffffff"
+            android:textColor="#ffffff"/>
 
         <Button
+            android:id="@+id/submit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/submit"
-            android:layout_margin="10dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
             android:background="@drawable/custom_button"
             android:text="Submit"
-            android:textColor="#CC0033"/>
-
-        <Button
-            android:id="@+id/restart"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="40dp"
-            android:background="@drawable/custom_button"
-            android:text="Restart"
-            android:layout_gravity="center_horizontal"
             android:textColor="#CC0033" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/restart"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="left"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="6dp"
+                android:layout_marginRight="10dp"
+                android:layout_toEndOf="@+id/home_quiz"
+                android:layout_toRightOf="@+id/home_quiz"
+                android:background="@drawable/custom_button"
+                android:text="Restart"
+                android:textColor="#CC0033" />
+
+            <Button
+                android:id="@+id/home_quiz"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="right"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/custom_button"
+                android:text="Home"
+                android:textColor="#CC0033" />
+        </RelativeLayout>
 
     </LinearLayout>
 

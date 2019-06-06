@@ -14,13 +14,10 @@ public class QuestionModel {
 
     public String getQuestionString() {return QuestionString; }
 
-    public void setQuestionString(String questionString) { QuestionString = questionString; }
-
     public String getQuestionString2() {return QuestionString2; }
 
     public String getAnswer() { return Answer; }
 
-    public void setAnswer(String answer) { Answer = answer; }
 
 
 

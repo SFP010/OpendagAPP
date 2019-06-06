@@ -1,12 +1,18 @@
 package com.example.homescreen;
 
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -14,12 +20,14 @@ public class CodingQuiz extends AppCompatActivity {
 
     TextView questionLabel, questionCountLabel, valuesLabel, scoreLabel;
     EditText answerEdt;
-    Button submitButton, restartButton;
+    Button submitButton, restartButton, homeButton;
     ProgressBar progressBar;
     ArrayList<QuestionModel> questionModelArrayList;
 
     int currentPosition = 0;
     int numberOfCorrectAnswers = 0;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +42,7 @@ public class CodingQuiz extends AppCompatActivity {
         answerEdt = findViewById(R.id.answer);
         submitButton = findViewById(R.id.submit);
         restartButton = findViewById(R.id.restart);
+        homeButton = findViewById(R.id.home_quiz);
         progressBar = findViewById(R.id.progress);
 
         questionModelArrayList = new ArrayList<>();
@@ -44,7 +53,16 @@ public class CodingQuiz extends AppCompatActivity {
         submitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                checkAnswer();
+                if(questionModelArrayList.size() > (currentPosition+1)) {
+                    checkAnswer();
+                } else {
+                    checkAnswer();
+                    scoreLabel.setText("Score : " + numberOfCorrectAnswers + "/" + questionModelArrayList.size());
+                    answerEdt.setVisibility(View.INVISIBLE);
+                    submitButton.setVisibility(View.INVISIBLE);
+
+
+                }
             }
         });
 
@@ -55,6 +73,15 @@ public class CodingQuiz extends AppCompatActivity {
                 numberOfCorrectAnswers = 0;
                 progressBar.setProgress(0);
                 setData();
+                answerEdt.setVisibility(View.VISIBLE);
+                submitButton.setVisibility(View.VISIBLE);
+            }
+        });
+
+        homeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(CodingQuiz.this, HomeScreen.class));
             }
         });
     }
@@ -63,18 +90,26 @@ public class CodingQuiz extends AppCompatActivity {
 
         String answerString = answerEdt.getText().toString().trim();
 
-        if(questionModelArrayList.size() > currentPosition) {
-            if (answerString.equalsIgnoreCase(questionModelArrayList.get(currentPosition).getAnswer()) && (answerString !="")) {
+
+        if(questionModelArrayList.size() > (currentPosition)) {
+            Toast answertoast = Toast.makeText(CodingQuiz.this, "Wrong! The right answer was : "+questionModelArrayList.get(currentPosition).getAnswer(), Toast.LENGTH_SHORT);
+            answertoast.setGravity(Gravity.CENTER,0,0);
+            Toast emptytoast = Toast.makeText(CodingQuiz.this, "Please put in an answer", Toast.LENGTH_SHORT);
+            emptytoast.setGravity(Gravity.CENTER,0,0);
+            if (answerString.equalsIgnoreCase(questionModelArrayList.get(currentPosition).getAnswer()) && (answerEdt.getText().length() != 0)) {
                 numberOfCorrectAnswers++;
                 currentPosition++;
                 setData();
                 answerEdt.setText("");
-            } else if (answerString != "") {
+            } else if (answerEdt.getText().length() != 0) {
+                answertoast.show();
                 currentPosition++;
                 setData();
                 answerEdt.setText("");
+            } else {
+                emptytoast.show();
             }
-        } else {}
+        }
 
         int x = ((currentPosition) * 100) / questionModelArrayList.size();
         progressBar.setProgress(x);
@@ -82,17 +117,33 @@ public class CodingQuiz extends AppCompatActivity {
 
     public void setUpQuestion(){
 
-        questionModelArrayList.add(new QuestionModel("\n\tCODE\n\n\tx = 5\n\ty = 1\n\tx = 3\n\ty = x\n\n\tWhat is y = ...?","", "3"));
-        questionModelArrayList.add(new QuestionModel("\n\tCODE\n\n\tx = y + z\n\tz = x - y\n\n\tWhat is x = ...?", "\n\tVALUES\n\n\tx = 5\n\ty = 1\n\tz = 2", "3"));
-        questionModelArrayList.add(new QuestionModel("\n\tCODE\n\n\tx = 1\n\ty = x + 1\n\tz = y\n\tw = z * (-...?)", "\n\tVALUES\n\n\tw = -8\n\tx = 1\n\ty = 4\n\tz = 4", "4"));
-        questionModelArrayList.add(new QuestionModel("\n\tCODE\n\n\tb = 5 * a\n\tc = (a + b) * b\n\td = a + b - c * a\n\n\tWhat is c = ...?","\n\tVALUES\n\n\ta = 3" , "270"));
-        questionModelArrayList.add(new QuestionModel("\n\tCODE\n\n\ta = x and y\n\tb = not x\n\tc = x or y\n\tWhat is b = ...?","\n\n\tVALUES\n\tx = True\n\ty = False", "False"));
-        questionModelArrayList.add(new QuestionModel("\n\tCODE\n\n\tz = x + \", \" + w + \"!\"\n\tb = k < -3\n\tc = k>= -4\n\td = b and c\n\n\tWhat is z = ...?","\n\tVALUES\n\n\tx = \"Hello\"\n\tw = \"world\"\n\tk = int(\"-3\")", "\"Hello, world!\""));
-        questionModelArrayList.add(new QuestionModel("\n\tCODE\n\n\tyears = int(\"35\")\n\tgreet = ...? + ...? + ...?\n\tlength = len(greet)","\n\tVALUES\n\n\thello = \"Hi\"\n\tname = \"John\"\n\tcomma = \", \"\n\tyears = 35\n\tlength = 8", "hello + comma + name"));
-        questionModelArrayList.add(new QuestionModel("\n\tCODE\n\n\tyears = int(\"35\")\n\tgreet = ... + ... + ...\n\tlength = len(greet)\n\tbool = length > 7","\n\tVALUES\n\n\thello = \"Hi\"\n\tname = \"John\"\n\tcomma = \", \"\n\tyears = 35\n\tlength = 8\n\tbool = ...?", "True"));
-        questionModelArrayList.add(new QuestionModel("\n\tCODE\n\n\tif (x>y):\n\t\tz = z * 5 - 6\n\telse:\n\tz = z * 10 + 5\n\n\tWhat is z = ...?","\n\tVALUES\n\n\tx = 3\n\t y = 7\n\tz = 10", "105"));
-        questionModelArrayList.add(new QuestionModel("\n\tCODE\n\n\tif (x>y):\n\t\ts = \"Max is x.\"\n\telif (y>x):\n\ts = \"Max is y.\"\n\telse:\n\ts = \"Numbers are equal.\"\n\n\tWhat is s = ...?","\n\tVALUES\n\n", "\"Max is x.\""));
+        questionModelArrayList.add(new QuestionModel("CODE\n\nx = 5\ny = 1\nx = 3\ny = x","What is the value of y = ...?", "3"));
+        questionModelArrayList.add(new QuestionModel("CODE\n\nx = 5\ny = 1\nz = 2\nx = y + z\nz = x - y", "What is the value of x = ...?", "3"));
+        questionModelArrayList.add(new QuestionModel("CODE\n\nx = 1\ny = 4\nz = 4\nw = -8\ny = x + 1\nz = y\nw = z * (-...?)", "What needs to be filled in, in the blank spot of w?", "4"));
+        questionModelArrayList.add(new QuestionModel("CODE\n\na = 3\nb = 5 * a\nc = (a + b) * b\nd = a + b - c * a","What is the value of c = ...?" , "270"));
+        questionModelArrayList.add(new QuestionModel("CODE\n\nx = True\ny = False\na = x and y\nb = not x\nc = x or y","What is the value of b = ...?", "False"));
+        questionModelArrayList.add(new QuestionModel("CODE\n\nx = \"Hello\"\nw = \"world\"\nk = int(\"-3\")\nz = x + \", \" + w + \"!\"\nb = k < -3\nc = k>= -4\nd = b and c","What is the value of z = ...?", "\"Hello, world!\""));
+        questionModelArrayList.add(new QuestionModel("CODE\n\nhello = \"Hi\"\nname = \"John\"\ncomma = \", \"\nyears = 35\nlength = 8\ngreet = ...? + ...? + ...?\nlength = len(greet)\ngreet = \"Hi, John\"","What needs to be filled in\ngreet = ... .. ... .. ...?", "hello + comma + name"));
+        questionModelArrayList.add(new QuestionModel("CODE\n\nhello = \"Hi\"\nname = \"John\"\ncomma = \", \"\nyears = 35\nlength = 8\nbool = length > 7\ngreet = hello + comma + name\nlength = len(greet)\nbool = ...?","What is the value of bool = ...?", "True"));
+        questionModelArrayList.add(new QuestionModel("CODE\n\nx = 3\ny = 7\nz = 10\n\nif (x>y):\n\tz = z * 5 - 6\nelse:\n\tz = z * 10 + 5","What is the value of z = ...?", "105"));
+        questionModelArrayList.add(new QuestionModel("CODE\n\nif (x>y):\n\ts = \"Max is x.\"\nelse if (y>x):\n\ts = \"Max is y.\"\nelse:\n\ts = \"Numbers are  equal.\"","What is the value of s = ...?", "\"Max is x.\""));
 
+
+    }
+
+    public void saveScore() {
+        SharedPreferences highScore = PreferenceManager.getDefaultSharedPreferences(this);
+        if(numberOfCorrectAnswers > highScore.getInt("highScore",0)) {
+            SharedPreferences.Editor editor = highScore.edit();
+            editor.putInt("highScore", numberOfCorrectAnswers);
+            editor.apply();
+        } else {}
+    }
+
+    public int getScore() {
+        SharedPreferences highScore = PreferenceManager.getDefaultSharedPreferences(this);
+        int score = highScore.getInt("highScore", 0);
+        return score;
     }
 
     public void setData() {
@@ -105,9 +156,17 @@ public class CodingQuiz extends AppCompatActivity {
             scoreLabel.setText("Score : " + numberOfCorrectAnswers + "/" + questionModelArrayList.size());
 
         }  else {
-            questionLabel.setText("\n\n\tYou have finished\n\tthe quiz!\n\n\tThis is your score :\n\n\t"+numberOfCorrectAnswers+" out of "+questionModelArrayList.size());
-            valuesLabel.setText("ANSWERS\n\n1. 3\n2. 3\n3. 4\n4. 270\n5. False\n6. \"Hello, world!\"\n7. hello + comma + name\n8. True\n9. 105\n10. \"Max is x.\"");
+            questionLabel.setText("\n\nYou have finished\nthe quiz!\n\nThis is your score :\n\n"+numberOfCorrectAnswers+" out of "+questionModelArrayList.size());
+            if (getScore() != 0){
+                valuesLabel.setText("Your highscore is : "+String.valueOf(getScore()));
+                saveScore();
+            } else {
+                saveScore();
+                valuesLabel.setText("");
+            }
         }
     }
+
+
 
 }

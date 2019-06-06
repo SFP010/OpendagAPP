@@ -26,6 +26,10 @@ public class CMD1 extends AppCompatActivity {
     Button route;
     private DrawerLayout dl;
     private ActionBarDrawerToggle abdt;
+
+    String shareBody = "Hi, 3th of December there is an open day of Communicatie and multimedia design, would you like to come with me? The address is Rotterdam Wijnhaven 107.";
+    String shareSub = "Openday";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -91,6 +95,8 @@ public class CMD1 extends AppCompatActivity {
                 return true;
             }
         });
+
+
 //email, WhatsApp, Facebook and Twitter needed!
         email = findViewById(R.id.email);
         email.setOnClickListener(new View.OnClickListener() {
@@ -99,8 +105,6 @@ public class CMD1 extends AppCompatActivity {
                     Intent emailIntent = new Intent(Intent.ACTION_SENDTO);
                     emailIntent.setData(Uri.parse("mailto:")); //only email apps
                     emailIntent.putExtra(Intent.EXTRA_EMAIL,new String[]{"Spoot@hotmail.nl"});
-                    String shareBody = "Hi, 3th of December there is an open day of Communicatie and multimedia design, would you like to come with me? The address is Rotterdam Wijnhaven 107.";
-                    String shareSub = "Openday";
                     emailIntent.putExtra(Intent.EXTRA_SUBJECT,shareSub);
                     emailIntent.putExtra(Intent.EXTRA_TEXT,shareBody);
                     if (emailIntent.resolveActivity(getPackageManager()) != null) {
@@ -118,7 +122,7 @@ public class CMD1 extends AppCompatActivity {
                 Intent wappIntent = new Intent(Intent.ACTION_SEND);
                 wappIntent.setType("text/plain");
                 wappIntent.setPackage("com.whatsapp");
-                wappIntent.putExtra(Intent.EXTRA_TEXT, "Hi, 3th of December there is an open day of Communicatie and multimedia design, would you like to come with me? The address is Rotterdam Wijnhaven 107.");
+                wappIntent.putExtra(Intent.EXTRA_TEXT, shareBody);
                 if (wappIntent.resolveActivity(getPackageManager()) != null) {
                     startActivity(wappIntent);
                 } else {
@@ -134,7 +138,7 @@ public class CMD1 extends AppCompatActivity {
                 Intent twitterIntent = new Intent(Intent.ACTION_SEND);
                 twitterIntent.setType("text/plain");
                 twitterIntent.setPackage("com.twitter.android");
-                twitterIntent.putExtra(Intent.EXTRA_TEXT, "Hi, 3th of December there is an open day of Communicatie and multimedia design, would you like to come with me? The address is Rotterdam Wijnhaven 107.");
+                twitterIntent.putExtra(Intent.EXTRA_TEXT, shareBody);
                 if (twitterIntent.resolveActivity(getPackageManager()) != null) {
                     startActivity(twitterIntent);
                 } else {
@@ -150,7 +154,7 @@ public class CMD1 extends AppCompatActivity {
                 Intent facebookIntent = new Intent(Intent.ACTION_SEND);
                 facebookIntent.setType("text/plain");
                 facebookIntent.setPackage("com.facebook.android");
-                facebookIntent.putExtra(Intent.EXTRA_TEXT, "Hi, 3th of December there is an open day of Communicatie and multimedia design, would you like to come with me? The address is Rotterdam Wijnhaven 107.");
+                facebookIntent.putExtra(Intent.EXTRA_TEXT, shareBody);
                 if (facebookIntent.resolveActivity(getPackageManager()) != null) {
                     startActivity(facebookIntent);
                 } else {
