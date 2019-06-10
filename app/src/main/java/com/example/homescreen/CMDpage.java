@@ -78,7 +78,7 @@ public class CMDpage extends AppCompatActivity {
     }
 
     public void openOpenday() {
-        Intent intent = new Intent(this, CMD1.class);
+        Intent intent = new Intent(this, CMD3.class);
         startActivity(intent);
     }
     @Override

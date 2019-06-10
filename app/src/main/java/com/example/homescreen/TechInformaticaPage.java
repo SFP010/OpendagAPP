@@ -98,7 +98,7 @@ public class TechInformaticaPage extends AppCompatActivity {
     }
 
     public void openOpendays(){
-        Intent intent = new Intent(this, TechnInform1.class);
+        Intent intent = new Intent(this, TechnInform3.class);
         startActivity(intent);
 
 

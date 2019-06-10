@@ -93,7 +93,7 @@ public class CommunicationPage extends AppCompatActivity {
     }
 
     public void openComopenday(){
-        Intent intent = new Intent(this,Communicatie1.class);
+        Intent intent = new Intent(this,Communicatie3.class);
         startActivity(intent);
 
     }

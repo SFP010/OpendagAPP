@@ -78,7 +78,7 @@ public class CMGTpage extends AppCompatActivity {
     }
 
     public void openOpenday() {
-        Intent intent = new Intent(this, CreativeMGT1.class);
+        Intent intent = new Intent(this, Creativemgt3.class);
         startActivity(intent);
     }
     @Override
