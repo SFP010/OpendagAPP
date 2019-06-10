@@ -69,7 +69,7 @@ public class CMD3 extends AppCompatActivity {
                 }
                 else if ( id == R.id.studychoice)
                 {
-                    Intent myIntent = new Intent(nav_view.getContext(), Study_test.class);
+                    Intent myIntent = new Intent(nav_view.getContext(), QuizActivity.class);
                     startActivityForResult(myIntent,0);
                     dl.closeDrawer(GravityCompat.START);
                 }
