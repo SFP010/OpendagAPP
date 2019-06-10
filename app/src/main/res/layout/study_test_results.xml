@@ -27,7 +27,7 @@
         android:layout_width="500dp"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="183dp"
+        android:layout_marginTop="200dp"
         android:autoLink="web"
         android:gravity="center"
         android:text="@string/text_to_change1"
@@ -66,7 +66,7 @@
         android:layout_marginLeft="59dp"
         android:layout_marginEnd="58dp"
         android:layout_marginRight="58dp"
-        android:layout_marginBottom="462dp"
+        android:layout_marginBottom="540dp"
         android:text="@string/text_to_show"
         android:textSize="20sp" />
 

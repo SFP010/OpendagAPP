@@ -85,7 +85,7 @@
                 android:layout_marginRight="9dp"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:text="WHAT?             WHEN?             WHERE?"
+                android:text="WHAT?             WHEN?         WHERE?"
                 android:textSize="22sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
