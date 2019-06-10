@@ -2,6 +2,7 @@ package com.example.homescreen;
 
 
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.provider.CalendarContract;
 import android.support.annotation.NonNull;
@@ -16,6 +17,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.PopupMenu;
 import android.widget.Toast;
+
+import java.io.IOException;
+import java.io.InputStream;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -28,7 +32,7 @@ public class CMD1 extends AppCompatActivity {
     private DrawerLayout dl;
     private ActionBarDrawerToggle abdt;
 
-    String shareBody = "Hi, 3th of December there is an open day of Communicatie and multimedia design, would you like to come with me? The address is Rotterdam Wijnhaven 107.";
+    String shareBody = "Hi, 23th of February there is an open day of Communicatie and multimedia design, would you like to come with me? The address is Rotterdam Wijnhaven 107.";
     String shareSub = "Openday";
 
     @Override
@@ -98,6 +102,7 @@ public class CMD1 extends AppCompatActivity {
             }
         });
 
+      final Uri imageUri = Uri.parse("android.resource://com.example.homescreen/drawable/cmd1.png");
 
 //email, WhatsApp, Facebook and Twitter needed!
         shareButton = findViewById(R.id.ShareIt);
@@ -147,7 +152,7 @@ public class CMD1 extends AppCompatActivity {
                                                            Intent facebookIntent = new Intent(Intent.ACTION_SEND);
                                                            facebookIntent.setType("image/*");
                                                            facebookIntent.setPackage("com.facebook.katana");
-                                                           facebookIntent.putExtra(Intent.EXTRA_STREAM, "");
+                                                           facebookIntent.putExtra(Intent.EXTRA_STREAM, imageUri);
                                                            if (facebookIntent.resolveActivity(getPackageManager()) != null) {
                                                                startActivity(facebookIntent);
                                                            } else {
