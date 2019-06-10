@@ -1,9 +1,7 @@
 package com.example.homescreen;
 
-import android.content.Context;
+
 import android.content.Intent;
-import android.content.res.Resources;
-import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.provider.CalendarContract;
 import android.support.annotation.NonNull;
@@ -18,7 +16,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.PopupMenu;
 import android.widget.Toast;
-
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -38,6 +35,7 @@ public class CMD1 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.cmd1);
+
         dl = (DrawerLayout)findViewById(R.id.dl);
         abdt = new ActionBarDrawerToggle(this, dl,R.string.Open, R.string.Close);
         abdt.setDrawerIndicatorEnabled(true);
@@ -149,7 +147,7 @@ public class CMD1 extends AppCompatActivity {
                                                            Intent facebookIntent = new Intent(Intent.ACTION_SEND);
                                                            facebookIntent.setType("image/*");
                                                            facebookIntent.setPackage("com.facebook.katana");
-                                                           facebookIntent.putExtra(Intent.EXTRA_STREAM, "" );
+                                                           facebookIntent.putExtra(Intent.EXTRA_STREAM, "");
                                                            if (facebookIntent.resolveActivity(getPackageManager()) != null) {
                                                                startActivity(facebookIntent);
                                                            } else {
@@ -209,6 +207,7 @@ public class CMD1 extends AppCompatActivity {
             }
         });
     }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         return abdt.onOptionsItemSelected(item) || super.onOptionsItemSelected(item);
