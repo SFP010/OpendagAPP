@@ -86,12 +86,42 @@
                         android:textColor="#CC0033"
                         android:textSize="14sp" />
 
+                    <View
+                        android:id="@+id/lijn"
+                        android:layout_width="match_parent"
+                        android:layout_height="7dp"
+                        android:layout_below="@+id/textView8"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginEnd="91dp"
+                        android:layout_marginRight="91dp"
+                        android:background="#CC0033"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView8"></View>
+
                     <TextView
                         android:id="@+id/textView5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="We train you to be a software engineer. You get started with the development of software for various applications. You are able to analyze design and implement complex IT systems. Click button above for more"
                         android:textColor="#FFFFFF" />
+
+                    <View
+                        android:id="@+id/lijn10"
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:layout_below="@+id/textView8"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginEnd="91dp"
+                        android:layout_marginRight="91dp"
+                        android:background="#CC0033"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView8"></View>
 
                     <Button
                         android:id="@+id/communicationClick"
@@ -103,12 +133,42 @@
                         android:textColor="#CC0033"
                         android:textSize="14sp" />
 
+                    <View
+                        android:id="@+id/lijn18"
+                        android:layout_width="match_parent"
+                        android:layout_height="7dp"
+                        android:layout_below="@+id/textView8"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginEnd="91dp"
+                        android:layout_marginRight="91dp"
+                        android:background="#CC0033"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView8"></View>
+
                     <TextView
                         android:id="@+id/textView6"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Do you have a keen eye and ear for the stories op people and brands? Are you creative with text and image and facinated by the world of media? Then the communication course is for you! CLick button above for more"
                         android:textColor="#FFFFFF" />
+
+                    <View
+                        android:id="@+id/lijn12"
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:layout_below="@+id/textView8"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginEnd="91dp"
+                        android:layout_marginRight="91dp"
+                        android:background="#CC0033"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView8"></View>
 
                     <Button
                         android:id="@+id/techinformaticaClick"
@@ -121,12 +181,42 @@
                         android:textColor="#CC0033"
                         android:textSize="14sp" />
 
+                    <View
+                        android:id="@+id/lijn13"
+                        android:layout_width="match_parent"
+                        android:layout_height="7dp"
+                        android:layout_below="@+id/textView8"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginEnd="91dp"
+                        android:layout_marginRight="91dp"
+                        android:background="#CC0033"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView8"></View>
+
                     <TextView
                         android:id="@+id/textView4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="As a technical computer scientist you work on modern IT systems in which hardware and software are integrated. Thanks to programming and hardware knowledge, you can operate at the intersection thereof. Click button above for more"
                         android:textColor="#FFFFFF" />
+
+                    <View
+                        android:id="@+id/lijn14"
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:layout_below="@+id/textView8"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginEnd="91dp"
+                        android:layout_marginRight="91dp"
+                        android:background="#CC0033"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView8"></View>
 
                     <Button
                         android:id="@+id/cmgtbutton"
@@ -138,12 +228,42 @@
                         android:textColor="#CC0033"
                         android:textSize="14sp" />
 
+                    <View
+                        android:id="@+id/lijn15"
+                        android:layout_width="match_parent"
+                        android:layout_height="7dp"
+                        android:layout_below="@+id/textView8"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginEnd="91dp"
+                        android:layout_marginRight="91dp"
+                        android:background="#CC0033"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView8"></View>
+
                     <TextView
                         android:id="@+id/textView18"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Creative Media and Game Technologies is about innovating and making digital products.  CMGT'er means you're a developer who develops interactive digital products, like web- and phone applications, and you'll also learn the basics about making games"
                         android:textColor="#ffffff" />
+
+                    <View
+                        android:id="@+id/lijn16"
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:layout_below="@+id/textView8"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginEnd="91dp"
+                        android:layout_marginRight="91dp"
+                        android:background="#CC0033"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView8"></View>
 
                     <Button
                         android:id="@+id/button4"
@@ -154,12 +274,42 @@
                         android:textColor="#CC0033"
                         android:textSize="14sp" />
 
+                    <View
+                        android:id="@+id/lijn19"
+                        android:layout_width="match_parent"
+                        android:layout_height="7dp"
+                        android:layout_below="@+id/textView8"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginEnd="91dp"
+                        android:layout_marginRight="91dp"
+                        android:background="#CC0033"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView8"></View>
+
                     <TextView
                         android:id="@+id/textView19"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Communication and Multimedia Design is a study about designing. As a designer you'll work within studio's, for real clients. You'll learn how to design websites or apps , and you'll learn how to prototype and test."
                         android:textColor="#ffffff" />
+
+                    <View
+                        android:id="@+id/lijn17"
+                        android:layout_width="match_parent"
+                        android:layout_height="7dp"
+                        android:layout_below="@+id/textView8"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginEnd="91dp"
+                        android:layout_marginRight="91dp"
+                        android:background="#CC0033"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView8"></View>
 
                 </LinearLayout>
             </ScrollView>
