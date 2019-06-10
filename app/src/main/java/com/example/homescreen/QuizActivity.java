@@ -1,10 +1,13 @@
 package com.example.homescreen;
 
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -20,6 +23,7 @@ public class QuizActivity extends AppCompatActivity {
     private Button mButtonChoice4;
     private Button mPreviousButton;
     private Button mNextButton;
+    ProgressBar progressBar;
 
     public static Boolean clicked1=false; public static Boolean clicked2=false; public static Boolean clicked3=false; public static Boolean clicked4=false;
     public static Boolean clicked5=false; public static Boolean clicked6=false; public static Boolean clicked7=false; public static Boolean clicked8=false;
@@ -52,33 +56,90 @@ public class QuizActivity extends AppCompatActivity {
     @Override
     protected void onResume()
     {
-        clicked1 = false;clicked2 = false;clicked3 = false;clicked4 = false;
-        clicked5 = false;clicked6 = false;clicked7 = false;clicked8 = false;
-        clicked9 = false;clicked10 = false;clicked11 = false;clicked12 = false;
-        clicked13 = false;clicked14 = false;clicked15 = false;clicked16 = false;
-        clicked17 = false;clicked18 = false;clicked19 = false;clicked20 = false;
-        clicked21 = false;clicked22 = false;clicked23 = false;clicked24 = false;
-        clicked25 = false;clicked26 = false;clicked27 = false;clicked28 = false;
-        clicked29 = false;clicked30 = false;clicked31 = false;clicked32 = false;
-        clicked33 = false;clicked34 = false;clicked35 = false;clicked36 = false;
-        clicked37 = false;clicked38 = false;clicked39 = false;clicked40 = false;
-        clicked41 = false;clicked42 = false;clicked43 = false;clicked44 = false;
-        clicked45 = false;clicked46 = false;clicked47 = false;clicked48 = false;
-        clicked49 = false;clicked50 = false;clicked51 = false;clicked52 = false;
-        clicked53 = false;clicked54 = false;clicked55 = false;clicked56 = false;
+        if (Study_test_results.ACTIVITY_CHECK == 11){
+            mQuestionNumber = 13;
+            mScore = 14;
+            updateScore(mScore);
+            NextPage();
+        } else {
+            clicked1 = false;
+            clicked2 = false;
+            clicked3 = false;
+            clicked4 = false;
+            clicked5 = false;
+            clicked6 = false;
+            clicked7 = false;
+            clicked8 = false;
+            clicked9 = false;
+            clicked10 = false;
+            clicked11 = false;
+            clicked12 = false;
+            clicked13 = false;
+            clicked14 = false;
+            clicked15 = false;
+            clicked16 = false;
+            clicked17 = false;
+            clicked18 = false;
+            clicked19 = false;
+            clicked20 = false;
+            clicked21 = false;
+            clicked22 = false;
+            clicked23 = false;
+            clicked24 = false;
+            clicked25 = false;
+            clicked26 = false;
+            clicked27 = false;
+            clicked28 = false;
+            clicked29 = false;
+            clicked30 = false;
+            clicked31 = false;
+            clicked32 = false;
+            clicked33 = false;
+            clicked34 = false;
+            clicked35 = false;
+            clicked36 = false;
+            clicked37 = false;
+            clicked38 = false;
+            clicked39 = false;
+            clicked40 = false;
+            clicked41 = false;
+            clicked42 = false;
+            clicked43 = false;
+            clicked44 = false;
+            clicked45 = false;
+            clicked46 = false;
+            clicked47 = false;
+            clicked48 = false;
+            clicked49 = false;
+            clicked50 = false;
+            clicked51 = false;
+            clicked52 = false;
+            clicked53 = false;
+            clicked54 = false;
+            clicked55 = false;
+            clicked56 = false;
 
-        CMIscore=0; CMIscore2=0;
-        COMscore=0; COMscore2=0;
-        IGOscore=0; IGOscore2=0;
-        LVGscore=0; LVGscore2=0;
-        ISOscore=0; ISOscore2=0;
-        IVLscore=0; IVLscore2=0;
-        RMIscore=0; RMIscore2=0;
+            CMIscore = 0;
+            CMIscore2 = 0;
+            COMscore = 0;
+            COMscore2 = 0;
+            IGOscore = 0;
+            IGOscore2 = 0;
+            LVGscore = 0;
+            LVGscore2 = 0;
+            ISOscore = 0;
+            ISOscore2 = 0;
+            IVLscore = 0;
+            IVLscore2 = 0;
+            RMIscore = 0;
+            RMIscore2 = 0;
 
-        mScore = 1;
-        mQuestionNumber = 0;
+            mScore = 1;
+            mQuestionNumber = 0;
 
-        NextPage();
+            NextPage();
+        }
+
         super.onResume();
     }
 
@@ -95,6 +156,7 @@ public class QuizActivity extends AppCompatActivity {
         mButtonChoice4 = (Button)findViewById(R.id.choice4);
         mPreviousButton = (Button)findViewById(R.id.Previousbutton);
         mNextButton = (Button)findViewById(R.id.Nextbutton);
+        progressBar = findViewById(R.id.progressbar);
 
         NextPage();
 
@@ -1762,7 +1824,7 @@ public class QuizActivity extends AppCompatActivity {
                 if (mQuestionNumber <= 1){
                     Toast.makeText(QuizActivity.this, "You can not go back further", Toast.LENGTH_SHORT).show();
                 }else {
-                    mQuestionNumber = mQuestionNumber - 1;
+                    mQuestionNumber -= 1;
                     updateQuestionMinus();
                 }
             }
@@ -1785,6 +1847,32 @@ public class QuizActivity extends AppCompatActivity {
         startActivity(gostudypage);
     }
 
+    private void GoHome() {
+        Intent gohome = new Intent(this, HomeScreen.class);
+        startActivity(gohome);
+    }
+
+    //https://www.youtube.com/watch?v=men8GB-7yM0 tutorial for alertdialog
+    public void ShowAlertDialog(View view) {
+
+        AlertDialog.Builder alert = new AlertDialog.Builder(this);
+            alert.setTitle("Do you want to go back to the homescreen?");
+            alert.setMessage("This will erase all your current progress");
+            alert.setPositiveButton("Yes", new DialogInterface.OnClickListener(){
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+                    GoHome();
+                }
+            });
+            alert.setNegativeButton("No", new DialogInterface.OnClickListener(){
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+                    ;
+                }
+            });
+            alert.create().show();
+    }
+
 
     private void NextPage(){
         mQuestionNumber++;
@@ -1793,6 +1881,9 @@ public class QuizActivity extends AppCompatActivity {
         mButtonChoice2.setText(mQuestionLibrary.getChoice2(mQuestionNumber));
         mButtonChoice3.setText(mQuestionLibrary.getChoice3(mQuestionNumber));
         mButtonChoice4.setText(mQuestionLibrary.getChoice4(mQuestionNumber));
+
+        int x = ((mScore) *100) / 14;
+        progressBar.setProgress(x);
     }
 
     private void updateQuestionMinus(){
@@ -1804,6 +1895,9 @@ public class QuizActivity extends AppCompatActivity {
 
         mScore = mScore - 1;
         updateScore(mScore);
+
+        int x = ((mScore) *100) / 14;
+        progressBar.setProgress(x);
     }
 
     private void updateScore(int point) {

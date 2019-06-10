@@ -11,9 +11,10 @@ import android.widget.TextView;
 
 public class Study_test_results extends AppCompatActivity {
 
-    int oldVaue;
+
 
     private Button HomeButton;
+    private Button ContinueButton;
 
     private int CMItotal = QuizActivity.CMIscore + QuizActivity.CMIscore2;
     private int COMtotal = QuizActivity.COMscore + QuizActivity.COMscore2;
@@ -24,19 +25,30 @@ public class Study_test_results extends AppCompatActivity {
     private int RMItotal = QuizActivity.RMIscore + QuizActivity.RMIscore2;
     private int Biggest = CMItotal;
     private String Biggest2 = "CMItotal";
+    public static int ACTIVITY_CHECK = 10;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.study_test_results);
         HomeButton = (Button)findViewById(R.id.home_button);
+        ContinueButton = (Button)findViewById(R.id.continue_button);
         changeTextOnce();
 
 
         HomeButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
+                ACTIVITY_CHECK = 10;
                 Homebutton();
+            }
+        });
+
+        ContinueButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                ACTIVITY_CHECK = 11;
+                Continuebutton();
             }
         });
     }
@@ -151,6 +163,11 @@ public class Study_test_results extends AppCompatActivity {
     private void Homebutton() {
         Intent gohome = new Intent(this, HomeScreen.class);
         startActivity(gohome);
+    }
+
+    private void Continuebutton() {
+        Intent gostudy = new Intent(this, QuizActivity.class);
+        startActivity(gostudy);
     }
 }
 
