@@ -99,7 +99,7 @@ public class InformaticaPage extends AppCompatActivity {
     }
 
     public void openOpenday(){
-        Intent intent = new Intent(this, InformaticaOpendag.class);
+        Intent intent = new Intent(this, InformaticaOpendag3.class);
         startActivity(intent);
 
 
