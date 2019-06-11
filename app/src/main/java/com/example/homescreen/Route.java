@@ -1,6 +1,7 @@
 package com.example.homescreen;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.FragmentActivity;
@@ -20,6 +21,8 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+
+import java.util.Locale;
 
 public class Route extends FragmentActivity implements OnMapReadyCallback {
     EditText title1, title2;
@@ -85,7 +88,11 @@ public class Route extends FragmentActivity implements OnMapReadyCallback {
         routeOption.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                
+                String navigationUri = String.format(Locale.ENGLISH, "google.navigation:q=" + 51.917261 + "," + 4.484192);
+                Intent mapIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(navigationUri));
+                mapIntent.setPackage("com.google.android.apps.maps");
+                startActivity(mapIntent);
+
             }
         });
 

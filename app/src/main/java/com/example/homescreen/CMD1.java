@@ -1,6 +1,8 @@
 package com.example.homescreen;
 
+
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.provider.CalendarContract;
 import android.support.annotation.NonNull;
@@ -13,27 +15,31 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.PopupMenu;
 import android.widget.Toast;
 
+import java.io.IOException;
+import java.io.InputStream;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
 public class CMD1 extends AppCompatActivity {
     Button copen;
-    Button email, whatsapp, twitter, facebook;
+    Button shareButton;
     Button question;
     Button route;
     private DrawerLayout dl;
     private ActionBarDrawerToggle abdt;
 
-    String shareBody = "Hi, 3th of December there is an open day of Communicatie and multimedia design, would you like to come with me? The address is Rotterdam Wijnhaven 107.";
+    String shareBody = "Hi, 23th of February there is an open day of Communicatie and multimedia design, would you like to come with me? The address is Rotterdam Wijnhaven 107.";
     String shareSub = "Openday";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.cmd1);
+
         dl = (DrawerLayout)findViewById(R.id.dl);
         abdt = new ActionBarDrawerToggle(this, dl,R.string.Open, R.string.Close);
         abdt.setDrawerIndicatorEnabled(true);
@@ -96,72 +102,69 @@ public class CMD1 extends AppCompatActivity {
             }
         });
 
+      final Uri imageUri = Uri.parse("android.resource://com.example.homescreen/drawable/cmd1.png");
 
 //email, WhatsApp, Facebook and Twitter needed!
-        email = findViewById(R.id.email);
-        email.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                    Intent emailIntent = new Intent(Intent.ACTION_SENDTO);
-                    emailIntent.setData(Uri.parse("mailto:")); //only email apps
-                    emailIntent.putExtra(Intent.EXTRA_EMAIL,new String[]{"Spoot@hotmail.nl"});
-                    emailIntent.putExtra(Intent.EXTRA_SUBJECT,shareSub);
-                    emailIntent.putExtra(Intent.EXTRA_TEXT,shareBody);
-                    if (emailIntent.resolveActivity(getPackageManager()) != null) {
-                        startActivity(emailIntent);
-                    } else {
-                        Toast.makeText(CMD1.this, "Email not installed", Toast.LENGTH_SHORT).show();
-                    }
-                }
-            });
+        shareButton = findViewById(R.id.ShareIt);
+        shareButton.setOnClickListener(new View.OnClickListener() {
+                                           @Override
+                                           public void onClick(View view) {
+                                               final PopupMenu shareIt = new PopupMenu(CMD1.this, shareButton);
+                                               shareIt.getMenuInflater().inflate(R.menu.share_menu, shareIt.getMenu());
 
-        whatsapp = findViewById(R.id.whatsapp);
-        whatsapp.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent wappIntent = new Intent(Intent.ACTION_SEND);
-                wappIntent.setType("text/plain");
-                wappIntent.setPackage("com.whatsapp");
-                wappIntent.putExtra(Intent.EXTRA_TEXT, shareBody);
-                if (wappIntent.resolveActivity(getPackageManager()) != null) {
-                    startActivity(wappIntent);
-                } else {
-                    Toast.makeText(CMD1.this, "Whatsapp not installed", Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
+                                               shareIt.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+                                                   @Override
+                                                   public boolean onMenuItemClick(MenuItem item) {
+                                                       int share_id = item.getItemId();
 
-        twitter = findViewById(R.id.twitter);
-        twitter.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent twitterIntent = new Intent(Intent.ACTION_SEND);
-                twitterIntent.setType("text/plain");
-                twitterIntent.setPackage("com.twitter.android");
-                twitterIntent.putExtra(Intent.EXTRA_TEXT, shareBody);
-                if (twitterIntent.resolveActivity(getPackageManager()) != null) {
-                    startActivity(twitterIntent);
-                } else {
-                    Toast.makeText(CMD1.this, "Twitter not installed", Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
-
-        facebook = findViewById(R.id.facebook);
-        facebook.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent facebookIntent = new Intent(Intent.ACTION_SEND);
-                facebookIntent.setType("text/plain");
-                facebookIntent.setPackage("com.facebook.android");
-                facebookIntent.putExtra(Intent.EXTRA_TEXT, shareBody);
-                if (facebookIntent.resolveActivity(getPackageManager()) != null) {
-                    startActivity(facebookIntent);
-                } else {
-                    Toast.makeText(CMD1.this, "Facebook not installed", Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
+                                                       if (share_id == R.id.e_mail) {
+                                                           Intent emailIntent = new Intent(Intent.ACTION_SENDTO);
+                                                           emailIntent.setData(Uri.parse("mailto:")); //only email apps
+                                                           emailIntent.putExtra(Intent.EXTRA_EMAIL, new String[]{"Spoot@hotmail.nl"});
+                                                           emailIntent.putExtra(Intent.EXTRA_SUBJECT, shareSub);
+                                                           emailIntent.putExtra(Intent.EXTRA_TEXT, shareBody);
+                                                           if (emailIntent.resolveActivity(getPackageManager()) != null) {
+                                                               startActivity(emailIntent);
+                                                           } else {
+                                                               Toast.makeText(CMD1.this, "Email not installed", Toast.LENGTH_SHORT).show();
+                                                           }
+                                                       } else if (share_id == R.id.Wapp) {
+                                                           Intent wappIntent = new Intent(Intent.ACTION_SEND);
+                                                           wappIntent.setType("text/plain");
+                                                           wappIntent.setPackage("com.whatsapp");
+                                                           wappIntent.putExtra(Intent.EXTRA_TEXT, shareBody);
+                                                           if (wappIntent.resolveActivity(getPackageManager()) != null) {
+                                                               startActivity(wappIntent);
+                                                           } else {
+                                                               Toast.makeText(CMD1.this, "Whatsapp not installed", Toast.LENGTH_SHORT).show();
+                                                           }
+                                                       } else if (share_id == R.id.twit) {
+                                                           Intent twitterIntent = new Intent(Intent.ACTION_SEND);
+                                                           twitterIntent.setType("text/plain");
+                                                           twitterIntent.setPackage("com.twitter.android");
+                                                           twitterIntent.putExtra(Intent.EXTRA_TEXT, shareBody);
+                                                           if (twitterIntent.resolveActivity(getPackageManager()) != null) {
+                                                               startActivity(twitterIntent);
+                                                           } else {
+                                                               Toast.makeText(CMD1.this, "Twitter not installed", Toast.LENGTH_SHORT).show();
+                                                           }
+                                                       } else if (share_id == R.id.faceB) {
+                                                           Intent facebookIntent = new Intent(Intent.ACTION_SEND);
+                                                           facebookIntent.setType("image/*");
+                                                           facebookIntent.setPackage("com.facebook.katana");
+                                                           facebookIntent.putExtra(Intent.EXTRA_STREAM, imageUri);
+                                                           if (facebookIntent.resolveActivity(getPackageManager()) != null) {
+                                                               startActivity(facebookIntent);
+                                                           } else {
+                                                               Toast.makeText(CMD1.this, "Facebook not installed", Toast.LENGTH_SHORT).show();
+                                                           }
+                                                       }
+                                                       return true;
+                                                   }
+                                               });
+                                               shareIt.show();
+                                           }
+                                       });
 
         copen = findViewById(R.id.AddToCalender);
         copen.setOnClickListener(new View.OnClickListener() {
@@ -209,13 +212,11 @@ public class CMD1 extends AppCompatActivity {
             }
         });
     }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         return abdt.onOptionsItemSelected(item) || super.onOptionsItemSelected(item);
     }
-
-
-
 }
 
 
