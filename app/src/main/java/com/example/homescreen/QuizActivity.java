@@ -1810,7 +1810,7 @@ public class QuizActivity extends AppCompatActivity {
                 }else if (mQuestionNumber == 14){
                     NextPagina(clicked53, clicked54, clicked55, clicked56);
                 }else {
-
+                    GoStudyPage();
                 }
             }
         });
